@@ -54,7 +54,7 @@ const COLLABORATORS = [
   { name: 'Minzhu Zhao', title: 'PhD Student, University of Minnesota', website: 'https://mindyzhaominzhu.github.io/', photo: '/images/people/manual/minzhu-zhao.jpg' },
   { name: 'Emma Jiren Wang', title: 'Research Assistant, Virginia Tech', website: 'https://github.com/Jiren1247', photo: '/images/people/manual/emma-jiren-wang.jpg' },
   { name: 'Zhe Tan', title: 'Master Student, University of Illinois Urbana-Champaign', website: 'https://www.linkedin.com/in/zhe-tan-650163238/', photo: '/images/people/manual/zhe-tan.jpg' },
-  { name: 'Mingyuan Li', title: 'Master Student, University of Pennsylvania', website: 'https://www.mingyuanli.site/' },
+  { name: 'Mingyuan Li', title: 'Master Student, University of Pennsylvania', website: 'https://www.mingyuanli.site/', photo: '/images/people/manual/mingyuan-li.jpg' },
   { name: 'Ziying Wang', title: 'Undergraduate Student, Duke Kunshan University', website: 'https://dl.acm.org/profile/99661743577', photo: '/images/people/manual/ziying-wang.jpg' },
 ];
 
