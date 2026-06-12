@@ -5,12 +5,10 @@ import MouseGlow from '../components/MouseGlow';
 
 const NEWS = [
   {
-    title: 'Zhicong attended CHI 2026 in Barcelona',
+    title: 'DEER Lab members joined Microsoft Family Day',
     date: '2026 April',
-    excerpt: 'Zhicong Lu participated in CHI 2026, the ACM conference on Human Factors in Computing Systems, held in Barcelona, Spain.',
-    tag: 'Conference',
-    link: 'https://chi2026.acm.org/',
-    linkLabel: 'CHI 2026',
+    excerpt: 'Zhicong Lu, Shiwei Hong, and Junjie Ma were invited to Microsoft Reston for a Family Day event connecting research with local communities.',
+    tag: 'Community',
   },
   {
     title: 'Zhicong interviewed by Mason CEC Communications',
@@ -21,10 +19,12 @@ const NEWS = [
     linkLabel: 'Read the interview',
   },
   {
-    title: 'DEER Lab members joined Microsoft Family Day',
+    title: 'Zhicong attended CHI 2026 in Barcelona',
     date: '2026 April',
-    excerpt: 'Zhicong Lu, Shiwei Hong, and Junjie Ma were invited to Microsoft Reston for a Family Day event connecting research with local communities.',
-    tag: 'Community',
+    excerpt: 'Zhicong Lu participated in CHI 2026, the ACM conference on Human Factors in Computing Systems, held in Barcelona, Spain.',
+    tag: 'Conference',
+    link: 'https://chi2026.acm.org/',
+    linkLabel: 'CHI 2026',
   },
   {
     title: 'Lab website launched',

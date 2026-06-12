@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 const NEWS_ITEMS = [
   {
     date: '2026 April',
-    title: 'Zhicong attended CHI 2026 in Barcelona',
-    text: 'Zhicong Lu attended CHI 2026 in Barcelona, Spain.',
-    href: 'https://chi2026.acm.org/',
+    title: 'DEER Lab members joined Microsoft Family Day',
+    text: 'Zhicong Lu, Shiwei Hong, and Junjie Ma were invited to Microsoft Reston for Family Day.',
   },
   {
     date: '2026 April',
@@ -15,8 +14,9 @@ const NEWS_ITEMS = [
   },
   {
     date: '2026 April',
-    title: 'DEER Lab members joined Microsoft Family Day',
-    text: 'Zhicong Lu, Shiwei Hong, and Junjie Ma were invited to Microsoft Reston for Family Day.',
+    title: 'Zhicong attended CHI 2026 in Barcelona',
+    text: 'Zhicong Lu attended CHI 2026 in Barcelona, Spain.',
+    href: 'https://chi2026.acm.org/',
   },
   {
     date: '2026 March',
