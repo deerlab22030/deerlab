@@ -5,12 +5,6 @@ import MouseGlow from '../components/MouseGlow';
 
 const NEWS = [
   {
-    title: 'Lab website launched',
-    date: '2026 March',
-    excerpt: 'DEER Lab established its first public website to share research, news, publications, and opportunities with the wider community.',
-    tag: 'Lab',
-  },
-  {
     title: 'Zhicong attended CHI 2026 in Barcelona',
     date: '2026 April',
     excerpt: 'Zhicong Lu participated in CHI 2026, the ACM conference on Human Factors in Computing Systems, held in Barcelona, Spain.',
@@ -31,6 +25,12 @@ const NEWS = [
     date: '2026 April',
     excerpt: 'Zhicong Lu, Shiwei Hong, and Junjie Ma were invited to Microsoft Reston for a Family Day event connecting research with local communities.',
     tag: 'Community',
+  },
+  {
+    title: 'Lab website launched',
+    date: '2026 March',
+    excerpt: 'DEER Lab established its first public website to share research, news, publications, and opportunities with the wider community.',
+    tag: 'Lab',
   },
 ];
 

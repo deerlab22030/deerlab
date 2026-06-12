@@ -1,95 +1,135 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Nav from '../sections/Nav';
 import Footer from '../sections/Footer';
 import MouseGlow from '../components/MouseGlow';
 
+const AVATAR = '/images/deer-avatar.png';
+
 const DIRECTOR = {
   name: 'Zhicong Lu',
   title: 'Assistant Professor',
-  dept: 'Computer Science, George Mason University',
-  email: 'zhicong.lu@gmu.edu',
+  dept: 'Department of Computer Science, George Mason University',
+  email: 'deerlab22030@gmail.com',
   website: 'https://luzhc.github.io',
-  scholar: 'https://scholar.google.com/citations?user=7tUEh2gAAAAJ',
+  cec: 'https://cec.gmu.edu/profiles/zlu6',
+  scholar: 'https://scholar.google.com/citations?hl=en&user=xCxyGuwAAAAJ&view_op=list_works',
   photo: '/images/portrait.jpg',
-  bio: "Zhicong Lu's research sits at the intersection of human-computer interaction and social computing, with a focus on understanding and designing for emerging forms of digital communication and creative expression. His work has been recognized with awards at CHI and CSCW, and has been covered by media outlets including the BBC and MIT Technology Review. He was a postdoctoral researcher at the University of Toronto and received his PhD from City University of Hong Kong.",
-  interests: ['Social Computing', 'HCI', 'Livestreaming', 'AI-Mediated Creativity', 'Accessible Gaming'],
+  bio: 'Zhicong Lu is an Assistant Professor of Computer Science at George Mason University. His research lies at the intersection of human-computer interaction, social computing, computational social science, and machine learning, with a focus on studying, designing, and building systems that support social interaction, trust, engagement, creativity, and knowledge sharing in virtual and physical spaces. He is currently exploring emerging media, livestreaming, mixed reality, and generative AI for knowledge sharing, creativity, and safeguarding intangible cultural heritage.',
+  interests: ['Human-Computer Interaction', 'Social Computing', 'Generative AI', 'Livestreaming', 'Intangible Cultural Heritage'],
 };
 
 const GMU = [
-  { name: 'Junjie Ma', focus: 'Social computing, online communities', project: 'Livestreamer-fan relationship dynamics on Bilibili', email: 'jma23@gmu.edu' },
-  { name: 'Haichang Li', focus: 'AI-mediated communication', project: 'Polymind: LLM-assisted visual diagramming for prewriting', email: 'hli22@gmu.edu', link: 'https://haichang.li' },
-  { name: 'Shiwei Hong', focus: 'Livestreaming and digital labor', project: 'Digital labor practices among Chinese livestreamers', email: 'shong3@gmu.edu' },
-  { name: 'Weisen Zhao', focus: 'Accessible gaming', project: 'Accessible game design for blind and low-vision players', email: 'wzhao22@gmu.edu' },
-  { name: 'Dhiman Goswami', focus: 'Digital inclusion', project: 'Privacy and security for older adults in digital spaces (co-advised with Sanchari Das)', email: 'dgoswami@gmu.edu' },
+  { name: 'Junjie Ma', title: 'PhD Student, George Mason University', focus: 'Social computing and online communities', email: 'jma23@gmu.edu' },
+  { name: 'Haichang Li', title: 'PhD Student, George Mason University', focus: 'AI-mediated communication and creativity support', email: 'hli22@gmu.edu', website: 'https://haichang.li' },
+  { name: 'Shiwei Hong', title: 'PhD Student, George Mason University', focus: 'Livestreaming, digital labor, and human-AI communities', email: 'shong3@gmu.edu' },
+  { name: 'Weisen Zhao', title: 'PhD Student, George Mason University', focus: 'Accessible gaming and inclusive play', email: 'wzhao22@gmu.edu' },
+  { name: 'Dhiman Goswami', title: 'PhD Student, George Mason University', focus: 'Digital inclusion, privacy, and older adults', email: 'dgoswami@gmu.edu' },
 ];
 
 const CITYU = [
-  { name: 'Piaohong Wang', focus: 'VTubing, streamer identity', project: 'VTubing as reconstruction of streamer self-presentation (co-advised with Jiawei Ma)', email: 'pwang@cityu.edu.hk', link: 'https://sites.google.com/view/wamgpiaohong/homepage' },
-  { name: 'Huanchen Wang', focus: 'Human-AI co-creativity', project: 'Human-AI co-creativity in prewriting with LLMs (co-advised with Yuxin Ma)', email: 'hwang@cityu.edu.hk', link: 'https://wanghchen.github.io/' },
-  { name: 'Luoying Lin', focus: 'Digital aging', project: 'Older adults\' engagement with livestreaming education (co-advised with Shengdong Zhao)', email: 'llin@cityu.edu.hk', link: 'https://luoying0.com' },
-  { name: 'Zhiyang Wu', focus: 'Social VR', project: 'Impact captions for interpersonal communication in social VR (co-advised with Chen Liu)', email: 'zywu@cityu.edu.hk' },
-  { name: 'Jian Ma', focus: 'Online platforms', project: 'Platform governance and user behavior (co-advised with Kede Ma)', email: 'jma@cityu.edu.hk' },
-  { name: 'Zhaoning Li', focus: 'Creative tools', project: 'Creativity support tools for visual communication (co-advised with Chen Ma)', email: 'zli@cityu.edu.hk' },
-  { name: 'Run Yang', focus: 'Accessible technology', project: 'Inclusive design for emerging technologies (co-advised with Yuhan Luo)', email: 'ryang@cityu.edu.hk' },
+  { name: 'Piaohong Wang', title: 'PhD Student, City University of Hong Kong', focus: 'VTubing and streamer identity', email: 'pwang@cityu.edu.hk', website: 'https://sites.google.com/view/wamgpiaohong/homepage' },
+  { name: 'Huanchen Wang', title: 'PhD Student, City University of Hong Kong', focus: 'Human-AI co-creativity and cultural design', email: 'hwang@cityu.edu.hk', website: 'https://wanghchen.github.io/' },
+  { name: 'Luoying Lin', title: 'PhD Student, City University of Hong Kong', focus: 'Digital aging and collective mourning', email: 'llin@cityu.edu.hk', website: 'https://luoying0.com' },
+  { name: 'Zhiyang Wu', title: 'PhD Student, City University of Hong Kong', focus: 'Social VR and communication tools', email: 'zywu@cityu.edu.hk' },
+  { name: 'Jian Ma', title: 'PhD Student, City University of Hong Kong', focus: 'Online platforms and governance', email: 'jma@cityu.edu.hk' },
+  { name: 'Zhaoning Li', title: 'PhD Student, City University of Hong Kong', focus: 'Creative tools and visual communication', email: 'zli@cityu.edu.hk' },
+  { name: 'Run Yang', title: 'PhD Student, City University of Hong Kong', focus: 'Inclusive and accessible technology', email: 'ryang@cityu.edu.hk' },
 ];
 
 const ALUMNI = [
-  { name: 'Siying Hu', now: 'Industry' },
-  { name: 'Yu Zhang', now: 'Academia' },
-  { name: 'Qian Wan', now: 'Research Lab', link: 'https://llewynwan.github.io/' },
+  { name: 'Siying Hu', title: 'Alumni PhD', focus: 'Human-AI interaction and communication', now: 'Industry' },
+  { name: 'Yu Zhang', title: 'Alumni PhD', focus: 'AI-supported storytelling and research tools', now: 'Academia' },
+  { name: 'Qian Wan', title: 'Alumni PhD', focus: 'Creativity support and human-AI co-creation', now: 'Research Lab', website: 'https://llewynwan.github.io/' },
 ];
 
 const VISITORS = [
-  { name: 'Ryan Yen', detail: 'UWaterloo MSc, MIT PhD' },
-  { name: 'Felicia Li Feng', detail: 'UWaterloo PhD' },
-  { name: 'Ethan Zhiyi Rong', detail: 'U Toronto PhD' },
-  { name: 'Elise Chenxinran Shen', detail: 'UBC MSc, U Toronto PhD' },
-  { name: 'Ningjing Tang', detail: 'CMU PhD' },
-  { name: 'Ankolika De', detail: 'Penn State PhD' },
-  { name: 'Lanjing Liu', detail: 'Virginia Tech PhD' },
-  { name: 'Minzhu Zhao', detail: 'University of Minnesota PhD' },
+  { name: 'Ryan Yen', currentlyAt: 'MIT PhD; UWaterloo MSc' },
+  { name: 'Felicia Li Feng', currentlyAt: 'UWaterloo PhD' },
+  { name: 'Ethan Zhiyi Rong', currentlyAt: 'U Toronto PhD' },
+  { name: 'Elise Chenxinran Shen', currentlyAt: 'U Toronto PhD; UBC MSc' },
+  { name: 'Ningjing Tang', currentlyAt: 'CMU PhD' },
+  { name: 'Ankolika De', currentlyAt: 'Penn State PhD' },
+  { name: 'Lanjing Liu', currentlyAt: 'Virginia Tech PhD' },
+  { name: 'Minzhu Zhao', currentlyAt: 'University of Minnesota PhD' },
 ];
 
+type Member = {
+  name: string;
+  title: string;
+  focus: string;
+  email?: string;
+  website?: string;
+  now?: string;
+};
+
+function MemberCard({ member }: { member: Member }) {
+  return (
+    <article className="group p-5 rounded-2xl bg-white transition-all hover:-translate-y-1" style={{ border: '1px solid var(--border)' }}>
+      <div className="flex gap-4 items-start">
+        <img src={AVATAR} alt="" className="w-[72px] h-[72px] rounded-2xl object-cover shrink-0" />
+        <div className="min-w-0 flex-1">
+          <h3 className="font-semibold text-[18px] leading-tight">{member.name}</h3>
+          <p className="text-[13px] mt-1" style={{ color: 'var(--text-muted)' }}>{member.title}</p>
+          <p className="text-[14px] mt-3 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{member.focus}</p>
+          {member.now && <p className="text-[13px] mt-2" style={{ color: 'var(--text-muted)' }}>Currently at {member.now}</p>}
+        </div>
+      </div>
+      <div className="mt-5 flex flex-wrap gap-2">
+        {member.website && (
+          <a href={member.website} target="_blank" rel="noopener noreferrer" className="text-[12px] font-medium px-3 py-1.5 rounded-full" style={{ border: '1px solid var(--border-dark)' }}>
+            Website
+          </a>
+        )}
+        {member.email && (
+          <a href={`mailto:${member.email}`} className="text-[12px] font-medium px-3 py-1.5 rounded-full" style={{ border: '1px solid var(--border)' }}>
+            Email
+          </a>
+        )}
+      </div>
+    </article>
+  );
+}
+
 export default function TeamPage() {
-  useEffect(() => { window.scrollTo(0, 0); }, []);
-  const [showContact, setShowContact] = useState<string | null>(null);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-[100dvh]" style={{ background: 'var(--bg-primary)' }}>
       <MouseGlow />
       <Nav />
 
-      {/* Header */}
       <div className="pt-32 pb-16">
         <div className="container-main">
           <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>People</span>
           <h1 className="text-h1 mb-4">Our Team</h1>
-          <p className="text-body-lg max-w-[600px]">
-            A diverse group of researchers passionate about inventing the future of human-computer interaction.
+          <p className="text-body-lg max-w-[680px]">
+            Researchers building culture-centered technologies for social connection, creativity, accessibility, and human-AI futures.
           </p>
         </div>
       </div>
 
-      {/* Director */}
       <section className="pb-20">
         <div className="container-main">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             <div className="lg:col-span-4">
-              <div className="rounded-2xl overflow-hidden sticky top-24" style={{ border: '1px solid var(--border)' }}>
-                <img src={DIRECTOR.photo} alt={DIRECTOR.name} className="w-full aspect-[3/4] object-cover" />
+              <div className="rounded-2xl overflow-hidden sticky top-24 bg-white" style={{ border: '1px solid var(--border)' }}>
+                <img src={DIRECTOR.photo} alt={DIRECTOR.name} className="w-full aspect-[4/5] object-cover" />
               </div>
             </div>
             <div className="lg:col-span-8">
-              <span className="text-label block mb-3">Director</span>
-              <h2 className="font-serif text-[42px] mb-2">{DIRECTOR.name}</h2>
+              <span className="text-label block mb-3">Principal Investigator</span>
+              <h2 className="font-serif text-[42px] md:text-[52px] leading-tight mb-2">{DIRECTOR.name}</h2>
               <p className="text-[16px] mb-1">{DIRECTOR.title}</p>
               <p className="text-body mb-6">{DIRECTOR.dept}</p>
               <p className="text-body-lg mb-8">{DIRECTOR.bio}</p>
               <div className="flex flex-wrap gap-2 mb-8">
-                {DIRECTOR.interests.map((i) => <span key={i} className="tag">{i}</span>)}
+                {DIRECTOR.interests.map((interest) => <span key={interest} className="tag">{interest}</span>)}
               </div>
-              <div className="flex gap-3">
-                <a href={DIRECTOR.website} target="_blank" rel="noopener noreferrer" className="text-[14px] font-medium px-5 py-2.5 rounded-full text-white" style={{ background: 'var(--bg-dark)' }}>Website</a>
+              <div className="flex flex-wrap gap-3">
+                <a href={DIRECTOR.cec} target="_blank" rel="noopener noreferrer" className="text-[14px] font-medium px-5 py-2.5 rounded-full text-white" style={{ background: 'var(--bg-dark)' }}>CEC Profile</a>
+                <a href={DIRECTOR.website} target="_blank" rel="noopener noreferrer" className="text-[14px] font-medium px-5 py-2.5 rounded-full" style={{ border: '1px solid var(--border-dark)' }}>Website</a>
                 <a href={`mailto:${DIRECTOR.email}`} className="text-[14px] font-medium px-5 py-2.5 rounded-full" style={{ border: '1px solid var(--border-dark)' }}>Email</a>
                 <a href={DIRECTOR.scholar} target="_blank" rel="noopener noreferrer" className="text-[14px] font-medium px-5 py-2.5 rounded-full" style={{ border: '1px solid var(--border-dark)' }}>Google Scholar</a>
               </div>
@@ -100,139 +140,62 @@ export default function TeamPage() {
 
       <div className="divider" />
 
-      {/* PhD Students */}
       <section className="py-20">
         <div className="container-main">
-          <h2 className="text-h3 mb-4">PhD Students</h2>
-          <p className="text-body mb-12 max-w-[600px]">
-            Each PhD student leads their own research project. Interested in collaborating? You can reach out to the lab or contact individual students directly.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
-              <h3 className="text-label mb-6">George Mason University</h3>
-              {GMU.map((s, i) => (
-                <div key={s.name} className="py-5" style={{ borderTop: i === 0 ? '1px solid var(--border-dark)' : '1px solid var(--border)' }}>
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      {s.link ? (
-                        <a href={s.link} target="_blank" rel="noopener noreferrer" className="font-semibold text-[17px] hover:underline underline-offset-4">{s.name}</a>
-                      ) : (
-                        <span className="font-semibold text-[17px]">{s.name}</span>
-                      )}
-                      <p className="text-[14px] mt-1" style={{ color: 'var(--text-secondary)' }}>{s.focus}</p>
-                    </div>
-                    <button
-                      onClick={() => setShowContact(showContact === s.name ? null : s.name)}
-                      className="text-[12px] font-medium px-3 py-1.5 rounded-full shrink-0 transition-all"
-                      style={{ border: '1px solid var(--border)', color: 'var(--text-secondary)' }}
-                    >
-                      {showContact === s.name ? 'Close' : 'Contact'}
-                    </button>
-                  </div>
+          <div className="mb-10">
+            <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>PhD Students</span>
+            <h2 className="text-h3 mb-3">George Mason University</h2>
+            <p className="text-body max-w-[680px]">Current students at GMU working across HCI, social computing, AI-mediated systems, accessibility, and online communities.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+            {GMU.map((member) => <MemberCard key={member.name} member={member} />)}
+          </div>
+        </div>
+      </section>
 
-                  {/* Project */}
-                  <p className="text-[15px] mt-3 leading-relaxed" style={{ color: 'var(--text-primary)' }}>
-                    <span style={{ color: 'var(--text-muted)' }}>Project: </span>{s.project}
-                  </p>
-
-                  {/* Contact info */}
-                  {showContact === s.name && (
-                    <div className="mt-3 flex gap-3 items-center">
-                      <a href={`mailto:${s.email}`} className="text-[13px] font-medium px-3 py-1.5 rounded-full text-white" style={{ background: '#2D6A4F' }}>
-                        {s.email}
-                      </a>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-            <div>
-              <h3 className="text-label mb-6">City University of Hong Kong</h3>
-              {CITYU.map((s, i) => (
-                <div key={s.name} className="py-5" style={{ borderTop: i === 0 ? '1px solid var(--border-dark)' : '1px solid var(--border)' }}>
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      {s.link ? (
-                        <a href={s.link} target="_blank" rel="noopener noreferrer" className="font-semibold text-[17px] hover:underline underline-offset-4">{s.name}</a>
-                      ) : (
-                        <span className="font-semibold text-[17px]">{s.name}</span>
-                      )}
-                      <p className="text-[14px] mt-1" style={{ color: 'var(--text-secondary)' }}>{s.focus}</p>
-                    </div>
-                    <button
-                      onClick={() => setShowContact(showContact === s.name ? null : s.name)}
-                      className="text-[12px] font-medium px-3 py-1.5 rounded-full shrink-0 transition-all"
-                      style={{ border: '1px solid var(--border)', color: 'var(--text-secondary)' }}
-                    >
-                      {showContact === s.name ? 'Close' : 'Contact'}
-                    </button>
-                  </div>
-
-                  <p className="text-[15px] mt-3 leading-relaxed" style={{ color: 'var(--text-primary)' }}>
-                    <span style={{ color: 'var(--text-muted)' }}>Project: </span>{s.project}
-                  </p>
-
-                  {showContact === s.name && (
-                    <div className="mt-3 flex gap-3 items-center">
-                      <a href={`mailto:${s.email}`} className="text-[13px] font-medium px-3 py-1.5 rounded-full text-white" style={{ background: '#2D6A4F' }}>
-                        {s.email}
-                      </a>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+      <section className="pb-20">
+        <div className="container-main">
+          <div className="mb-10">
+            <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>Collaborating PhD Students</span>
+            <h2 className="text-h3 mb-3">City University of Hong Kong</h2>
+            <p className="text-body max-w-[680px]">Collaborators continuing connected lines of research in livestreaming, VTubing, creativity support, accessibility, and social platforms.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+            {CITYU.map((member) => <MemberCard key={member.name} member={member} />)}
           </div>
         </div>
       </section>
 
       <div className="divider" />
 
-      {/* Alumni */}
       <section className="py-20">
         <div className="container-main">
-          <h2 className="text-h3 mb-8">Alumni PhDs</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {ALUMNI.map((a) => (
-              <div key={a.name} className="p-5 rounded-2xl bg-white" style={{ border: '1px solid var(--border)' }}>
-                {a.link ? (
-                  <a href={a.link} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline">{a.name}</a>
-                ) : (
-                  <p className="font-semibold">{a.name}</p>
-                )}
-                <p className="text-[13px] mt-1" style={{ color: 'var(--text-muted)' }}>Now at {a.now}</p>
-              </div>
-            ))}
+          <div className="mb-10">
+            <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>Alumni</span>
+            <h2 className="text-h3">Alumni PhDs</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {ALUMNI.map((member) => <MemberCard key={member.name} member={member} />)}
           </div>
         </div>
       </section>
 
       <div className="divider" />
 
-      {/* Visiting */}
       <section className="py-20">
         <div className="container-main">
-          <h2 className="text-h3 mb-8">Visiting Researchers & Interns</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {VISITORS.map((v) => (
-              <div key={v.name} className="p-4 rounded-2xl" style={{ background: 'rgba(255,255,255,0.5)', border: '1px solid var(--border)' }}>
-                <p className="font-medium text-[15px]">{v.name}</p>
-                <p className="text-[13px] mt-1" style={{ color: 'var(--text-muted)' }}>{v.detail}</p>
-              </div>
-            ))}
+          <div className="mb-10">
+            <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>Visitors</span>
+            <h2 className="text-h3">Visiting Researchers & Interns</h2>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="pb-24">
-        <div className="container-main text-center">
-          <div className="max-w-[500px] mx-auto">
-            <h3 className="font-serif text-[28px] mb-4">Work with us</h3>
-            <p className="text-body mb-6">We are always looking for passionate researchers. Reach out to the lab director or any PhD student.</p>
-            <a href="mailto:zhicong.lu@gmu.edu" className="text-[14px] font-medium px-6 py-3 rounded-full text-white inline-block" style={{ background: 'var(--bg-dark)' }}>
-              Get in Touch
-            </a>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {VISITORS.map((visitor) => (
+              <article key={visitor.name} className="p-5 rounded-2xl bg-white" style={{ border: '1px solid var(--border)' }}>
+                <img src={AVATAR} alt="" className="w-[56px] h-[56px] rounded-2xl object-cover mb-4" />
+                <h3 className="font-semibold text-[16px] leading-tight">{visitor.name}</h3>
+                <p className="text-[13px] mt-2" style={{ color: 'var(--text-muted)' }}>Currently at {visitor.currentlyAt}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

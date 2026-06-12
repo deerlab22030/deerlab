@@ -2,26 +2,26 @@ import { Link } from 'react-router-dom';
 
 const NEWS_ITEMS = [
   {
-    date: '2026 March',
-    title: 'Lab website launched',
-    text: 'DEER Lab established its first public website to share research, news, and opportunities.',
-  },
-  {
     date: '2026 April',
     title: 'Zhicong attended CHI 2026 in Barcelona',
-    text: 'Zhicong Lu participated in CHI 2026, the ACM conference on Human Factors in Computing Systems, held in Barcelona, Spain.',
+    text: 'Zhicong Lu attended CHI 2026 in Barcelona, Spain.',
     href: 'https://chi2026.acm.org/',
   },
   {
     date: '2026 April',
     title: 'Zhicong interviewed by Mason CEC Communications',
-    text: 'The interview highlights his research on digital platforms, livestreaming, culture, and community-building.',
+    text: 'Zhicong Lu was interviewed by Mason CEC Communications about technology, culture, and community.',
     href: 'https://cs.gmu.edu/news/2026-04/when-culture-clicks-studying-technologys-power-build-community',
   },
   {
     date: '2026 April',
     title: 'DEER Lab members joined Microsoft Family Day',
-    text: 'Zhicong Lu, Shiwei Hong, and Junjie Ma were invited to Microsoft Reston for a community-facing Family Day event.',
+    text: 'Zhicong Lu, Shiwei Hong, and Junjie Ma were invited to Microsoft Reston for Family Day.',
+  },
+  {
+    date: '2026 March',
+    title: 'Lab website launched',
+    text: 'DEER Lab launched its first public website.',
   },
 ];
 
@@ -51,7 +51,7 @@ export default function News() {
                       "{item.title}"
                     </Link>
                   )}
-                  <p className="text-[14px] md:text-[15px] leading-relaxed mt-1" style={{ color: 'var(--text-secondary)' }}>{item.text}</p>
+                  <span className="text-[15px] md:text-[16px] leading-relaxed" style={{ color: 'var(--text-primary)' }}> {item.text}</span>
                 </div>
               </article>
             ))}
