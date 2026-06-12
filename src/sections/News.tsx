@@ -2,34 +2,26 @@ import { Link } from 'react-router-dom';
 
 const NEWS_ITEMS = [
   {
-    date: '2026 April',
-    title: 'When culture clicks',
-    text: 'George Mason Computer Science features Zhicong Lu\'s work on technology, culture, and community.',
+    date: '2026 March',
+    title: 'Lab website launched',
+    text: 'DEER Lab established its first public website to share research, news, and opportunities.',
   },
   {
     date: '2026 April',
-    title: 'Reheat Nachos',
-    text: 'got accepted as ACL Findings.',
+    title: 'Zhicong attended CHI 2026 in Barcelona',
+    text: 'Zhicong Lu participated in CHI 2026, the ACM conference on Human Factors in Computing Systems, held in Barcelona, Spain.',
+    href: 'https://chi2026.acm.org/',
   },
   {
-    date: '2026 February',
-    title: 'Ripplet',
-    text: 'and related work got accepted at CHI.',
+    date: '2026 April',
+    title: 'Zhicong interviewed by Mason CEC Communications',
+    text: 'The interview highlights his research on digital platforms, livestreaming, culture, and community-building.',
+    href: 'https://cs.gmu.edu/news/2026-04/when-culture-clicks-studying-technologys-power-build-community',
   },
   {
-    date: '2025 August',
-    title: 'Human-AI social ecosystems',
-    text: 'became a growing direction in DEER Lab\'s work on AI agents and online communities.',
-  },
-  {
-    date: '2025 May',
-    title: 'Seeing through the overlap',
-    text: 'continues our work on communication, interpretation, and accessible digital experience.',
-  },
-  {
-    date: '2024 July',
-    title: 'Lab website',
-    text: 'entered its first public version.',
+    date: '2026 April',
+    title: 'DEER Lab members joined Microsoft Family Day',
+    text: 'Zhicong Lu, Shiwei Hong, and Junjie Ma were invited to Microsoft Reston for a community-facing Family Day event.',
   },
 ];
 
@@ -44,20 +36,23 @@ export default function News() {
           </Link>
         </div>
 
-        <div
-          className="max-h-[360px] overflow-y-auto pr-4"
-          style={{ scrollbarColor: 'rgba(26,26,26,0.28) transparent' }}
-        >
-          <div className="space-y-4">
-            {NEWS_ITEMS.map((item) => (
+        <div className="max-h-[360px] overflow-y-auto pr-4" style={{ scrollbarColor: 'rgba(26,26,26,0.28) transparent' }}>
+          <div className="space-y-5">
+            {NEWS_ITEMS.slice(0, 6).map((item) => (
               <article key={`${item.date}-${item.title}`} className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-2 md:gap-0">
                 <p className="text-[15px] font-semibold" style={{ color: 'var(--text-muted)' }}>{item.date}</p>
-                <p className="text-[15px] md:text-[16px] leading-relaxed" style={{ color: 'var(--text-primary)' }}>
-                  <Link to="/news" className="font-semibold hover:underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
-                    "{item.title}"
-                  </Link>
-                  {' '}{item.text}
-                </p>
+                <div>
+                  {item.href ? (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-[16px] font-semibold hover:underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
+                      "{item.title}"
+                    </a>
+                  ) : (
+                    <Link to="/news" className="text-[16px] font-semibold hover:underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
+                      "{item.title}"
+                    </Link>
+                  )}
+                  <p className="text-[14px] md:text-[15px] leading-relaxed mt-1" style={{ color: 'var(--text-secondary)' }}>{item.text}</p>
+                </div>
               </article>
             ))}
           </div>

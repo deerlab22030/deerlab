@@ -123,6 +123,40 @@
 }
 
 @layer utilities {
+  @keyframes page-slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes page-content-rise {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .page-motion {
+    animation: page-slide-in 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .page-motion h1,
+  .page-motion h2,
+  .page-motion p,
+  .page-motion article,
+  .page-motion section {
+    animation: page-content-rise 880ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
   .font-serif {
     font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
   }

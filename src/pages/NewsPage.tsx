@@ -5,32 +5,32 @@ import MouseGlow from '../components/MouseGlow';
 
 const NEWS = [
   {
-    title: 'When culture clicks: Studying technology\'s power to build community',
-    date: 'April 21, 2026',
-    excerpt: 'George Mason Computer Science profiled Zhicong Lu\'s research on livestreaming, intangible cultural heritage, generative AI, and digital platforms that help people build community.',
-    tag: 'Feature',
-    source: 'George Mason University',
+    title: 'Lab website launched',
+    date: '2026 March',
+    excerpt: 'DEER Lab established its first public website to share research, news, publications, and opportunities with the wider community.',
+    tag: 'Lab',
   },
   {
-    title: 'DEER Lab expands work on human-AI social ecosystems',
-    date: '2026',
-    excerpt: 'The lab is studying how generative AI affects social computing systems, from creative communication tools to future spaces where humans and AI agents interact.',
-    tag: 'Research Direction',
-    source: 'DEER Lab',
+    title: 'Zhicong attended CHI 2026 in Barcelona',
+    date: '2026 April',
+    excerpt: 'Zhicong Lu participated in CHI 2026, the ACM conference on Human Factors in Computing Systems, held in Barcelona, Spain.',
+    tag: 'Conference',
+    link: 'https://chi2026.acm.org/',
+    linkLabel: 'CHI 2026',
   },
   {
-    title: 'Recent work explores creativity support, livestreaming, and social VR',
-    date: '2025',
-    excerpt: 'Our current projects examine LLM-supported prewriting, playful captions for social VR, in-stream visual communication, and livestreaming-based learning communities.',
-    tag: 'Publications',
-    source: 'DEER Lab',
+    title: 'Zhicong interviewed by Mason CEC Communications',
+    date: '2026 April',
+    excerpt: 'The interview discusses how his research studies technology\'s power to support culture, livestreaming, community, and meaningful human connection.',
+    tag: 'Interview',
+    link: 'https://cs.gmu.edu/news/2026-04/when-culture-clicks-studying-technologys-power-build-community',
+    linkLabel: 'Read the interview',
   },
   {
-    title: 'Work with us on culture, community, and embodied digital experience',
-    date: 'Ongoing',
-    excerpt: 'We welcome collaborators and students interested in HCI, social computing, AI-mediated creativity, cultural participation, and inclusive online communities.',
-    tag: 'Opportunities',
-    source: 'DEER Lab',
+    title: 'DEER Lab members joined Microsoft Family Day',
+    date: '2026 April',
+    excerpt: 'Zhicong Lu, Shiwei Hong, and Junjie Ma were invited to Microsoft Reston for a Family Day event connecting research with local communities.',
+    tag: 'Community',
   },
 ];
 
@@ -65,10 +65,14 @@ export default function NewsPage() {
                 <div className="md:col-span-7">
                   <h2 className="font-serif text-[26px] leading-tight mb-3">{item.title}</h2>
                   <p className="text-body">{item.excerpt}</p>
+                  {item.link && (
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex mt-4 text-[14px] font-medium underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
+                      {item.linkLabel}
+                    </a>
+                  )}
                 </div>
                 <div className="md:col-span-3 md:text-right">
                   <span className="tag text-[11px] mb-3">{item.tag}</span>
-                  <p className="text-[13px] mt-3" style={{ color: 'var(--text-muted)' }}>{item.source}</p>
                 </div>
               </article>
             ))}

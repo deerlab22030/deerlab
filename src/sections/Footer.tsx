@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container-main">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 mb-12">
           <div className="lg:col-span-4">
-            <img src="/images/MasonLogo.png" alt="George Mason University" className="w-[260px] max-w-full h-auto mb-6" />
+            <img src="/images/MasonLogo.jpg" alt="George Mason University" className="w-[280px] max-w-full h-auto mb-6" />
             <p className="text-[15px] leading-relaxed max-w-[320px]" style={{ color: 'rgba(255,255,255,0.58)' }}>
               DEER Lab studies digital experience, embodied interaction, and the social futures of AI.
             </p>

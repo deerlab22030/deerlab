@@ -9,6 +9,7 @@ import TeamPage from './pages/TeamPage';
 import NewsPage from './pages/NewsPage';
 import BlogPage from './pages/BlogPage';
 import WorkWithUsPage from './pages/WorkWithUsPage';
+import PageMotion from './components/PageMotion';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,11 +26,11 @@ function App() {
     <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/news" element={<NewsPage />} />
-        <Route path="/research" element={<ResearchPage />} />
-        <Route path="/team" element={<TeamPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/work-with-us" element={<WorkWithUsPage />} />
+        <Route path="/news" element={<PageMotion><NewsPage /></PageMotion>} />
+        <Route path="/research" element={<PageMotion><ResearchPage /></PageMotion>} />
+        <Route path="/team" element={<PageMotion><TeamPage /></PageMotion>} />
+        <Route path="/blog" element={<PageMotion><BlogPage /></PageMotion>} />
+        <Route path="/work-with-us" element={<PageMotion><WorkWithUsPage /></PageMotion>} />
       </Routes>
     </HashRouter>
   );
