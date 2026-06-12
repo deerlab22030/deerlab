@@ -16,6 +16,7 @@ const DIRECTOR = {
   scholar: 'https://scholar.google.com/citations?hl=en&user=xCxyGuwAAAAJ&view_op=list_works',
   photo: '/images/zhicong-lu-profile.jpg',
   bio: 'Zhicong Lu is an Assistant Professor of Computer Science at George Mason University. His research lies at the intersection of human-computer interaction, social computing, computational social science, and machine learning, with a focus on studying, designing, and building systems that support social interaction, trust, engagement, creativity, and knowledge sharing in virtual and physical spaces. He is currently exploring emerging media, livestreaming, mixed reality, and generative AI for knowledge sharing, creativity, and safeguarding intangible cultural heritage.',
+  prior: 'Before joining George Mason University, he was an Assistant Professor at the City University of Hong Kong.',
   interests: ['Human-Computer Interaction', 'Social Computing', 'Generative AI', 'Livestreaming', 'Intangible Cultural Heritage'],
 };
 
@@ -24,7 +25,7 @@ const GMU = [
   { name: 'Haichang Li', title: 'PhD Student', email: 'hli52@gmu.edu', website: 'https://www.linkedin.com/in/haichangli/', photo: '/images/people/manual/haichang-li.jpg' },
   { name: 'Shiwei Hong', title: 'PhD Student', email: 'shong46@gmu.edu', photo: '/images/people/manual/shiwei-hong.jpg' },
   { name: 'Weisen Zhao', title: 'PhD Student', email: 'wzhao9@gmu.edu', website: 'https://www.linkedin.com/in/zhaoweisen/', photo: '/images/people/manual/weisen-zhao.jpg' },
-  { name: 'Dhiman Goswami', title: 'PhD Student', website: 'https://www.linkedin.com/in/dhimangoswami8/', photo: '/images/people/manual/dhiman-goswami.jpg' },
+  { name: 'Dhiman Goswami', title: 'PhD Student', website: 'https://www.linkedin.com/in/dhimangoswami8/', coadvised: 'Co-advised with Sanchari Das', photo: '/images/people/manual/dhiman-goswami.jpg' },
 ];
 
 const CITYU = [
@@ -36,8 +37,8 @@ const CITYU = [
 ];
 
 const ALUMNI = [
-  { name: 'Piaohong Wang, Ph.D.', title: 'Currently: Industry Researcher in OPPO Research Institute', degree: 'Ph.D., City University of Hong Kong', website: 'https://allenpiaohong.github.io/AllenPiaoHong/index.html', coadvised: 'Co-advised with Jiawei Ma', photo: '/images/people/manual/piaohong-wang.jpg' },
-  { name: 'Siying Hu, Ph.D.', title: 'Currently: Research Fellow in University of Queensland', degree: 'Ph.D., City University of Hong Kong', website: 'https://sychh.github.io/', photo: '/images/people/manual/siying-hu.jpg' },
+  { name: 'Piaohong Wang, Ph.D.', title: 'Industry Researcher in OPPO Research Institute', degree: 'Ph.D., City University of Hong Kong', website: 'https://allenpiaohong.github.io/AllenPiaoHong/index.html', coadvised: 'Co-advised with Jiawei Ma', photo: '/images/people/manual/piaohong-wang.jpg' },
+  { name: 'Siying Hu, Ph.D.', title: 'Research Fellow in University of Queensland', degree: 'Ph.D., City University of Hong Kong', website: 'https://sychh.github.io/', photo: '/images/people/manual/siying-hu.jpg' },
   { name: 'Yu Zhang, Ph.D.', title: 'Postdoctoral Fellow in City University of Hong Kong', degree: 'Ph.D., City University of Hong Kong', website: 'https://yuiz.github.io/', photo: '/images/people/manual/yu-zhang.jpg' },
   { name: 'Qian Wan, Ph.D.', title: 'Research Fellow in Nanyang Technological University.', degree: 'Ph.D., City University of Hong Kong', website: 'https://ahin-qianwan.github.io/', photo: '/images/people/manual/qian-wan.jpg' },
 ];
@@ -137,7 +138,8 @@ export default function TeamPage() {
               <h2 className="font-serif text-[42px] md:text-[52px] leading-tight mb-2">{DIRECTOR.name}</h2>
               <p className="text-[16px] mb-1">{DIRECTOR.title}</p>
               <p className="text-body mb-6">{DIRECTOR.dept}</p>
-              <p className="text-body-lg mb-8">{DIRECTOR.bio}</p>
+              <p className="text-body-lg mb-5">{DIRECTOR.bio}</p>
+              <p className="text-body-lg mb-8">{DIRECTOR.prior}</p>
               <div className="flex flex-wrap gap-2 mb-8">
                 {DIRECTOR.interests.map((interest) => <span key={interest} className="tag">{interest}</span>)}
               </div>
