@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { ExternalLink, GraduationCap, Mail, UserRound } from 'lucide-react';
 import Nav from '../sections/Nav';
 import Footer from '../sections/Footer';
 import MouseGlow from '../components/MouseGlow';
@@ -9,11 +10,11 @@ const DIRECTOR = {
   name: 'Zhicong Lu',
   title: 'Assistant Professor',
   dept: 'Department of Computer Science, George Mason University',
-  email: 'deerlab22030@gmail.com',
+  email: 'zlu6@gmu.edu',
   website: 'https://luzhc.github.io',
   cec: 'https://cec.gmu.edu/profiles/zlu6',
   scholar: 'https://scholar.google.com/citations?hl=en&user=xCxyGuwAAAAJ&view_op=list_works',
-  photo: '/images/portrait.jpg',
+  photo: '/images/zhicong-lu-profile.jpg',
   bio: 'Zhicong Lu is an Assistant Professor of Computer Science at George Mason University. His research lies at the intersection of human-computer interaction, social computing, computational social science, and machine learning, with a focus on studying, designing, and building systems that support social interaction, trust, engagement, creativity, and knowledge sharing in virtual and physical spaces. He is currently exploring emerging media, livestreaming, mixed reality, and generative AI for knowledge sharing, creativity, and safeguarding intangible cultural heritage.',
   interests: ['Human-Computer Interaction', 'Social Computing', 'Generative AI', 'Livestreaming', 'Intangible Cultural Heritage'],
 };
@@ -27,13 +28,13 @@ const GMU = [
 ];
 
 const CITYU = [
-  { name: 'Piaohong Wang', title: 'PhD Student, City University of Hong Kong', focus: 'VTubing and streamer identity', email: 'pwang@cityu.edu.hk', website: 'https://sites.google.com/view/wamgpiaohong/homepage' },
-  { name: 'Huanchen Wang', title: 'PhD Student, City University of Hong Kong', focus: 'Human-AI co-creativity and cultural design', email: 'hwang@cityu.edu.hk', website: 'https://wanghchen.github.io/' },
-  { name: 'Luoying Lin', title: 'PhD Student, City University of Hong Kong', focus: 'Digital aging and collective mourning', email: 'llin@cityu.edu.hk', website: 'https://luoying0.com' },
-  { name: 'Zhiyang Wu', title: 'PhD Student, City University of Hong Kong', focus: 'Social VR and communication tools', email: 'zywu@cityu.edu.hk' },
-  { name: 'Jian Ma', title: 'PhD Student, City University of Hong Kong', focus: 'Online platforms and governance', email: 'jma@cityu.edu.hk' },
-  { name: 'Zhaoning Li', title: 'PhD Student, City University of Hong Kong', focus: 'Creative tools and visual communication', email: 'zli@cityu.edu.hk' },
-  { name: 'Run Yang', title: 'PhD Student, City University of Hong Kong', focus: 'Inclusive and accessible technology', email: 'ryang@cityu.edu.hk' },
+  { name: 'Piaohong Wang', title: 'PhD Student, City University of Hong Kong', focus: 'VTubing and streamer identity', email: 'pwang@cityu.edu.hk', website: 'https://sites.google.com/view/wamgpiaohong/homepage', coadvised: 'Co-advised with Jiawei Ma' },
+  { name: 'Huanchen Wang', title: 'PhD Student, City University of Hong Kong', focus: 'Human-AI co-creativity and cultural design', email: 'hwang@cityu.edu.hk', website: 'https://wanghchen.github.io/', coadvised: 'Co-advised with Yuxin Ma' },
+  { name: 'Luoying Lin', title: 'PhD Student, City University of Hong Kong', focus: 'Digital aging and collective mourning', email: 'llin@cityu.edu.hk', website: 'https://luoying0.com', coadvised: 'Co-advised with Shengdong Zhao' },
+  { name: 'Zhiyang Wu', title: 'PhD Student, City University of Hong Kong', focus: 'Social VR and communication tools', email: 'zywu@cityu.edu.hk', coadvised: 'Co-advised with Chen Liu' },
+  { name: 'Jian Ma', title: 'PhD Student, City University of Hong Kong', focus: 'Online platforms and governance', email: 'jma@cityu.edu.hk', coadvised: 'Co-advised with Kede Ma' },
+  { name: 'Zhaoning Li', title: 'PhD Student, City University of Hong Kong', focus: 'Creative tools and visual communication', email: 'zli@cityu.edu.hk', coadvised: 'Co-advised with Chen Ma' },
+  { name: 'Run Yang', title: 'PhD Student, City University of Hong Kong', focus: 'Inclusive and accessible technology', email: 'ryang@cityu.edu.hk', coadvised: 'Co-advised with Yuhan Luo' },
 ];
 
 const ALUMNI = [
@@ -60,29 +61,31 @@ type Member = {
   email?: string;
   website?: string;
   now?: string;
+  coadvised?: string;
 };
 
 function MemberCard({ member }: { member: Member }) {
   return (
     <article className="group p-5 rounded-2xl bg-white transition-all hover:-translate-y-1" style={{ border: '1px solid var(--border)' }}>
-      <div className="flex gap-4 items-start">
-        <img src={AVATAR} alt="" className="w-[72px] h-[72px] rounded-2xl object-cover shrink-0" />
+      <div className="flex gap-5 items-start">
+        <img src={AVATAR} alt="" className="w-[92px] h-[92px] rounded-full object-cover shrink-0" />
         <div className="min-w-0 flex-1">
           <h3 className="font-semibold text-[18px] leading-tight">{member.name}</h3>
           <p className="text-[13px] mt-1" style={{ color: 'var(--text-muted)' }}>{member.title}</p>
           <p className="text-[14px] mt-3 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{member.focus}</p>
+          {member.coadvised && <p className="text-[13px] mt-2" style={{ color: 'var(--accent-green)' }}>{member.coadvised}</p>}
           {member.now && <p className="text-[13px] mt-2" style={{ color: 'var(--text-muted)' }}>Currently at {member.now}</p>}
         </div>
       </div>
       <div className="mt-5 flex flex-wrap gap-2">
         {member.website && (
-          <a href={member.website} target="_blank" rel="noopener noreferrer" className="text-[12px] font-medium px-3 py-1.5 rounded-full" style={{ border: '1px solid var(--border-dark)' }}>
-            Website
+          <a href={member.website} target="_blank" rel="noopener noreferrer" aria-label={`${member.name} website`} title="Website" className="inline-flex items-center justify-center w-9 h-9 rounded-full transition-all hover:-translate-y-0.5" style={{ border: '1px solid var(--border-dark)' }}>
+            <ExternalLink size={16} />
           </a>
         )}
         {member.email && (
-          <a href={`mailto:${member.email}`} className="text-[12px] font-medium px-3 py-1.5 rounded-full" style={{ border: '1px solid var(--border)' }}>
-            Email
+          <a href={`mailto:${member.email}`} aria-label={`Email ${member.name}`} title="Email" className="inline-flex items-center justify-center w-9 h-9 rounded-full transition-all hover:-translate-y-0.5" style={{ border: '1px solid var(--border)' }}>
+            <Mail size={16} />
           </a>
         )}
       </div>
@@ -128,10 +131,10 @@ export default function TeamPage() {
                 {DIRECTOR.interests.map((interest) => <span key={interest} className="tag">{interest}</span>)}
               </div>
               <div className="flex flex-wrap gap-3">
-                <a href={DIRECTOR.cec} target="_blank" rel="noopener noreferrer" className="text-[14px] font-medium px-5 py-2.5 rounded-full text-white" style={{ background: 'var(--bg-dark)' }}>CEC Profile</a>
-                <a href={DIRECTOR.website} target="_blank" rel="noopener noreferrer" className="text-[14px] font-medium px-5 py-2.5 rounded-full" style={{ border: '1px solid var(--border-dark)' }}>Website</a>
-                <a href={`mailto:${DIRECTOR.email}`} className="text-[14px] font-medium px-5 py-2.5 rounded-full" style={{ border: '1px solid var(--border-dark)' }}>Email</a>
-                <a href={DIRECTOR.scholar} target="_blank" rel="noopener noreferrer" className="text-[14px] font-medium px-5 py-2.5 rounded-full" style={{ border: '1px solid var(--border-dark)' }}>Google Scholar</a>
+                <a href={DIRECTOR.cec} target="_blank" rel="noopener noreferrer" aria-label="CEC Profile" title="CEC Profile" className="inline-flex items-center justify-center w-11 h-11 rounded-full text-white" style={{ background: 'var(--bg-dark)' }}><UserRound size={18} /></a>
+                <a href={DIRECTOR.website} target="_blank" rel="noopener noreferrer" aria-label="Website" title="Website" className="inline-flex items-center justify-center w-11 h-11 rounded-full" style={{ border: '1px solid var(--border-dark)' }}><ExternalLink size={18} /></a>
+                <a href={`mailto:${DIRECTOR.email}`} aria-label="Email" title="Email" className="inline-flex items-center justify-center w-11 h-11 rounded-full" style={{ border: '1px solid var(--border-dark)' }}><Mail size={18} /></a>
+                <a href={DIRECTOR.scholar} target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar" className="inline-flex items-center justify-center w-11 h-11 rounded-full" style={{ border: '1px solid var(--border-dark)' }}><GraduationCap size={18} /></a>
               </div>
             </div>
           </div>
@@ -145,7 +148,6 @@ export default function TeamPage() {
           <div className="mb-10">
             <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>PhD Students</span>
             <h2 className="text-h3 mb-3">George Mason University</h2>
-            <p className="text-body max-w-[680px]">Current students at GMU working across HCI, social computing, AI-mediated systems, accessibility, and online communities.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {GMU.map((member) => <MemberCard key={member.name} member={member} />)}
@@ -156,9 +158,7 @@ export default function TeamPage() {
       <section className="pb-20">
         <div className="container-main">
           <div className="mb-10">
-            <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>Collaborating PhD Students</span>
             <h2 className="text-h3 mb-3">City University of Hong Kong</h2>
-            <p className="text-body max-w-[680px]">Collaborators continuing connected lines of research in livestreaming, VTubing, creativity support, accessibility, and social platforms.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {CITYU.map((member) => <MemberCard key={member.name} member={member} />)}
@@ -191,7 +191,7 @@ export default function TeamPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {VISITORS.map((visitor) => (
               <article key={visitor.name} className="p-5 rounded-2xl bg-white" style={{ border: '1px solid var(--border)' }}>
-                <img src={AVATAR} alt="" className="w-[56px] h-[56px] rounded-2xl object-cover mb-4" />
+                <img src={AVATAR} alt="" className="w-[72px] h-[72px] rounded-full object-cover mb-4" />
                 <h3 className="font-semibold text-[16px] leading-tight">{visitor.name}</h3>
                 <p className="text-[13px] mt-2" style={{ color: 'var(--text-muted)' }}>Currently at {visitor.currentlyAt}</p>
               </article>
