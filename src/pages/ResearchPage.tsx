@@ -85,7 +85,7 @@ const PUBLICATIONS = [
   {
     year: '2025',
     title: 'Emotions in Fandom Crowdfunding: Investigating How Online Interactions Affect Collaborative Monetary Activities',
-    authors: 'Mingzhe Huang, Zhicong Lu, Chen Huang, Zhaoning Li, Huan Zhao, Xinning Zhou, Dong Cheng, and Ka Ying Wang',
+    authors: 'Molly Zhuangtong Huang, Zhicong Lu, Caishi Huang, Zhenning Li, Hantao Zhao, Xiaobo Zhou, Dazhao Cheng, and Kanye Ye Wang',
     venue: 'ACM Transactions on Computer-Human Interaction 32 (6), 1-46, 2025',
     tags: ['Social Computing', 'Human-Computer Interaction', 'Fandom', 'Journal'],
   },

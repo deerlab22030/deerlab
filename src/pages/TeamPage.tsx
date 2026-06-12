@@ -20,41 +20,41 @@ const DIRECTOR = {
 };
 
 const GMU = [
-  { name: 'Junjie Ma', title: 'PhD Student, George Mason University', email: 'jma26@gmu.edu', website: 'https://jeffrey-wiki.vercel.app/wiki/home' },
-  { name: 'Haichang Li', title: 'PhD Student, George Mason University', email: 'haichangli@alumni.purdue.edu', website: 'https://www.linkedin.com/in/haichangli/' },
-  { name: 'Shiwei Hong', title: 'PhD Student, George Mason University', email: 'shong46@gmu.edu' },
-  { name: 'Weisen Zhao', title: 'PhD Student, George Mason University', email: 'wzhao9@gmu.edu', website: 'https://www.linkedin.com/in/zhaoweisen/' },
-  { name: 'Dhiman Goswami', title: 'PhD Student, George Mason University', website: 'https://www.linkedin.com/in/dhimangoswami8/' },
+  { name: 'Junjie Ma', title: 'PhD Student', email: 'jma26@gmu.edu', website: 'https://jeffrey-wiki.vercel.app/wiki/home', photo: '/images/people/manual/junjie-ma.jpg' },
+  { name: 'Haichang Li', title: 'PhD Student', email: 'hli52@gmu.edu', website: 'https://www.linkedin.com/in/haichangli/', photo: '/images/people/manual/haichang-li.jpg' },
+  { name: 'Shiwei Hong', title: 'PhD Student', email: 'shong46@gmu.edu', photo: '/images/people/manual/shiwei-hong.jpg' },
+  { name: 'Weisen Zhao', title: 'PhD Student', email: 'wzhao9@gmu.edu', website: 'https://www.linkedin.com/in/zhaoweisen/', photo: '/images/people/manual/weisen-zhao.jpg' },
+  { name: 'Dhiman Goswami', title: 'PhD Student', website: 'https://www.linkedin.com/in/dhimangoswami8/', photo: '/images/people/manual/dhiman-goswami.jpg' },
 ];
 
 const CITYU = [
-  { name: 'Huanchen Wang', title: 'PhD Student, City University of Hong Kong', website: 'https://wanghchen.github.io/', coadvised: 'Co-advised with Yuxin Ma', photo: '/images/people/huanchen-wang.jpg' },
-  { name: 'Luoying Lin', title: 'PhD Student, City University of Hong Kong', website: 'https://luoying0.com/', coadvised: 'Co-advised with Shengdong Zhao', photo: '/images/people/luoying-lin.jpg' },
-  { name: 'Zhiyang Wu', title: 'PhD Student, City University of Hong Kong', website: 'https://scholars.cityu.edu.hk/en/persons/zhiyangwu5/', coadvised: 'Co-advised with Chen Liu', photo: '/images/people/zhiyang-wu.png' },
-  { name: 'Jian Ma', title: 'PhD Student, City University of Hong Kong', website: 'https://scholars.cityu.edu.hk/en/persons/jianma4/', coadvised: 'Co-advised with Kede Ma', photo: '/images/people/jian-ma.png' },
-  { name: 'Run Yang', title: 'PhD Student, City University of Hong Kong', website: 'https://scholars.cityu.edu.hk/en/persons/runyang2/', coadvised: 'Co-advised with Yuhan Luo', photo: '/images/people/run-yang.png' },
+  { name: 'Huanchen Wang', title: 'PhD Student', website: 'https://wanghchen.github.io/', coadvised: 'Co-advised with Yuxin Ma', photo: '/images/people/manual/huanchen-wang.jpg' },
+  { name: 'Luoying Lin', title: 'PhD Student', website: 'https://luoying0.com/', coadvised: 'Co-advised with Shengdong Zhao', photo: '/images/people/manual/luoying-lin.jpg' },
+  { name: 'Zhiyang Wu', title: 'PhD Student', website: 'https://scholars.cityu.edu.hk/en/persons/zhiyangwu5/', coadvised: 'Co-advised with Chen Liu' },
+  { name: 'Jian Ma', title: 'PhD Student', website: 'https://scholars.cityu.edu.hk/en/persons/jianma4/', coadvised: 'Co-advised with Kede Ma' },
+  { name: 'Run Yang', title: 'PhD Student', website: 'https://scholars.cityu.edu.hk/en/persons/runyang2/', coadvised: 'Co-advised with Yuhan Luo' },
 ];
 
 const ALUMNI = [
-  { name: 'Piaohong Wang', title: 'Alumni PhD', website: 'https://allenpiaohong.github.io/AllenPiaoHong/index.html', coadvised: 'Co-advised with Jiawei Ma' },
-  { name: 'Siying Hu', title: 'Alumni PhD', website: 'https://sychh.github.io/', photo: '/images/people/siying-hu.jpg' },
-  { name: 'Yu Zhang', title: 'Alumni PhD', website: 'https://yuiz.github.io/' },
-  { name: 'Qian Wan', title: 'Alumni PhD', website: 'https://ahin-qianwan.github.io/', photo: '/images/people/qian-wan.jpg' },
+  { name: 'Piaohong Wang, Ph.D.', title: 'Currently: Industry Researcher in OPPO Research Institute', degree: 'Ph.D., City University of Hong Kong', website: 'https://allenpiaohong.github.io/AllenPiaoHong/index.html', coadvised: 'Co-advised with Jiawei Ma', photo: '/images/people/manual/piaohong-wang.jpg' },
+  { name: 'Siying Hu, Ph.D.', title: 'Currently: Research Fellow in University of Queensland', degree: 'Ph.D., City University of Hong Kong', website: 'https://sychh.github.io/', photo: '/images/people/manual/siying-hu.jpg' },
+  { name: 'Yu Zhang, Ph.D.', title: 'Postdoctoral Fellow in City University of Hong Kong', degree: 'Ph.D., City University of Hong Kong', website: 'https://yuiz.github.io/', photo: '/images/people/manual/yu-zhang.jpg' },
+  { name: 'Qian Wan, Ph.D.', title: 'Research Fellow in Nanyang Technological University.', degree: 'Ph.D., City University of Hong Kong', website: 'https://ahin-qianwan.github.io/', photo: '/images/people/manual/qian-wan.jpg' },
 ];
 
 const COLLABORATORS = [
-  { name: 'Ryan Yen', title: 'PhD Student, MIT', website: 'https://ryanyen2.github.io/' },
-  { name: 'Felicia Li Feng', title: 'PhD Student, University of Waterloo', website: 'https://felicia35.github.io/' },
-  { name: 'Ethan Zhiyi Rong', title: 'PhD Student, University of Toronto', website: 'https://scholar.google.com/citations?user=M6A4OVYAAAAJ&hl=en&authuser=2', photo: '/images/people/ethan-zhiyi-rong.png' },
-  { name: 'Elise Chenxinran Shen', title: 'PhD Student, University of Toronto', website: 'https://elisexinranshen.github.io/', photo: '/images/people/elise-chenxinran-shen.png' },
-  { name: 'Ningjing Tang', title: 'PhD Student, Carnegie Mellon University', website: 'https://ningjingtang.com/' },
-  { name: 'AnKolika De', title: 'PhD Student, Penn State', website: 'https://sites.psu.edu/ankolikade/' },
-  { name: 'Lanjing Liu', title: 'HCI Researcher & Designer, Johns Hopkins', website: 'https://lanjing.design/' },
-  { name: 'Minzhu Zhao', title: 'PhD Student, University of Minnesota', website: 'https://mindyzhaominzhu.github.io/', photo: '/images/people/minzhu-zhao.jpg' },
-  { name: 'Emma Jiren Wang', title: 'Research Collaborator', website: 'https://github.com/Jiren1247', photo: '/images/people/emma-jiren-wang.png' },
-  { name: 'Zhe Tan', title: 'Research Collaborator', website: 'https://www.linkedin.com/in/zhe-tan-650163238/' },
-  { name: 'Mingyuan Li', title: 'Designer and Research Collaborator', website: 'https://www.mingyuanli.site/' },
-  { name: 'Ziying Wang', title: 'Research Collaborator', website: 'https://dl.acm.org/profile/99661743577' },
+  { name: 'Ryan Yen', title: 'PhD Student, Massachusetts Institute of Technology', website: 'https://ryanyen2.github.io/', photo: '/images/people/manual/ryan-yen.jpg' },
+  { name: 'Felicia Li Feng', title: 'PhD Student, University of Waterloo', website: 'https://felicia35.github.io/', photo: '/images/people/manual/felicia-li-feng.jpg' },
+  { name: 'Ethan Zhiyi Rong', title: 'PhD Student, University of Toronto', website: 'https://scholar.google.com/citations?user=M6A4OVYAAAAJ&hl=en&authuser=2' },
+  { name: 'Elise Chenxinran Shen', title: 'PhD Student, University of Toronto', website: 'https://elisexinranshen.github.io/', photo: '/images/people/manual/elise-chenxinran-shen.jpg' },
+  { name: 'Ningjing Tang', title: 'PhD Student, Carnegie Mellon University', website: 'https://ningjingtang.com/', photo: '/images/people/manual/ningjing-tang.jpg' },
+  { name: 'AnKolika De', title: 'PhD Student, Penn State', website: 'https://sites.psu.edu/ankolikade/', photo: '/images/people/manual/ankolika-de.jpg' },
+  { name: 'Lanjing Liu', title: 'PhD Student, Johns Hopkins University', website: 'https://lanjing.design/', photo: '/images/people/manual/lanjing-liu.jpg' },
+  { name: 'Minzhu Zhao', title: 'PhD Student, University of Minnesota', website: 'https://mindyzhaominzhu.github.io/', photo: '/images/people/manual/minzhu-zhao.jpg' },
+  { name: 'Emma Jiren Wang', title: 'Research Assistant, Virginia Tech', website: 'https://github.com/Jiren1247', photo: '/images/people/manual/emma-jiren-wang.jpg' },
+  { name: 'Zhe Tan', title: 'Master Student, University of Illinois Urbana-Champaign', website: 'https://www.linkedin.com/in/zhe-tan-650163238/', photo: '/images/people/manual/zhe-tan.jpg' },
+  { name: 'Mingyuan Li', title: 'Master Student, University of Pennsylvania', website: 'https://www.mingyuanli.site/' },
+  { name: 'Ziying Wang', title: 'Undergraduate Student, Duke Kunshan University', website: 'https://dl.acm.org/profile/99661743577', photo: '/images/people/manual/ziying-wang.jpg' },
 ];
 
 type Person = {
@@ -64,6 +64,7 @@ type Person = {
   website?: string;
   photo?: string;
   coadvised?: string;
+  degree?: string;
 };
 
 function IconLink({ href, label, type }: { href: string; label: string; type: 'email' | 'website' }) {
@@ -85,16 +86,17 @@ function IconLink({ href, label, type }: { href: string; label: string; type: 'e
 
 function PersonCard({ person }: { person: Person }) {
   return (
-    <article className="group p-5 rounded-2xl bg-white transition-all hover:-translate-y-1" style={{ border: '1px solid var(--border)' }}>
-      <div className="flex gap-5 items-center">
-        <img src={person.photo || AVATAR} alt="" className="w-[112px] h-[112px] rounded-full object-cover shrink-0" />
-        <div className="min-w-0 flex-1">
-          <h3 className="font-semibold text-[19px] leading-tight">{person.name}</h3>
+    <article className="group p-5 rounded-2xl bg-white h-[340px] flex flex-col justify-between transition-all hover:-translate-y-1" style={{ border: '1px solid var(--border)' }}>
+      <div className="flex flex-col gap-5 items-center">
+        <img src={person.photo || AVATAR} alt="" className="w-[132px] h-[132px] rounded-full object-cover shrink-0" />
+        <div className="w-full min-w-0 text-center">
+          <h3 className="font-semibold text-[18px] md:text-[19px] leading-tight whitespace-nowrap">{person.name}</h3>
           <p className="text-[14px] mt-2 leading-snug" style={{ color: 'var(--text-muted)' }}>{person.title}</p>
+          {person.degree && <p className="text-[13px] mt-2" style={{ color: 'var(--text-secondary)' }}>{person.degree}</p>}
           {person.coadvised && <p className="text-[13px] mt-3" style={{ color: 'var(--accent-green)' }}>{person.coadvised}</p>}
         </div>
       </div>
-      <div className="mt-5 flex flex-wrap gap-2">
+      <div className="mt-5 flex flex-wrap justify-center gap-2">
         {person.website && <IconLink href={person.website} label={`${person.name} website`} type="website" />}
         {person.email && <IconLink href={`mailto:${person.email}`} label={`Email ${person.name}`} type="email" />}
       </div>
@@ -183,7 +185,7 @@ export default function TeamPage() {
             <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>Alumni</span>
             <h2 className="text-h3">Alumni PhDs</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {ALUMNI.map((person) => <PersonCard key={person.name} person={person} />)}
           </div>
         </div>
