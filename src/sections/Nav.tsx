@@ -2,10 +2,11 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const NAV_ITEMS = [
-  { label: 'News', href: '/blog', isPage: true },
+  { label: 'News', href: '/news', isPage: true },
   { label: 'Research', href: '/research', isPage: true },
   { label: 'People', href: '/team', isPage: true },
-  { label: 'Join', href: '/#join', isPage: false },
+  { label: 'Blog', href: '/blog', isPage: true },
+  { label: 'Work with us', href: '/#work-with-us', isPage: false },
 ];
 
 export default function Nav() {

@@ -85,18 +85,18 @@ export default function Hero() {
               }}
             >
               <span className="line block" style={{ opacity: 0 }}>
-                Research on <em>human</em>
+                Where culture,
               </span>
               <span className="line block" style={{ opacity: 0 }}>
-                connection and
+                community, and
               </span>
               <span className="line block" style={{ opacity: 0 }}>
-                digital <u className="underline underline-offset-8 decoration-2" style={{ textDecorationColor: '#4ADE80' }}>empowerment</u>
+                AI <u className="underline underline-offset-8 decoration-2" style={{ textDecorationColor: '#4ADE80' }}>meet</u>
               </span>
             </h1>
 
             <p ref={bodyRef} className="text-[17px] leading-relaxed max-w-[460px] mb-8" style={{ opacity: 0, color: 'rgba(255,255,255,0.7)' }}>
-              Digital Experience and Embodied Research Lab explores how technology brings people closer — from livestreaming communities to AI-powered creativity.
+              Digital Experience and Embodied Research Lab studies how digital platforms and AI systems help people preserve culture, build community, and create meaning together.
             </p>
           </div>
         </div>

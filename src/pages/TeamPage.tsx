@@ -228,7 +228,7 @@ export default function TeamPage() {
       <section className="pb-24">
         <div className="container-main text-center">
           <div className="max-w-[500px] mx-auto">
-            <h3 className="font-serif text-[28px] mb-4">Join the team</h3>
+            <h3 className="font-serif text-[28px] mb-4">Work with us</h3>
             <p className="text-body mb-6">We are always looking for passionate researchers. Reach out to the lab director or any PhD student.</p>
             <a href="mailto:zhicong.lu@gmu.edu" className="text-[14px] font-medium px-6 py-3 rounded-full text-white inline-block" style={{ background: 'var(--bg-dark)' }}>
               Get in Touch

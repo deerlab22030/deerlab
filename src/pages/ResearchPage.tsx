@@ -5,30 +5,30 @@ import MouseGlow from '../components/MouseGlow';
 
 const AREAS = [
   {
-    title: 'Social Computing & Online Communities',
-    desc: 'How people build, maintain, and negotiate relationships through digital platforms — livestreaming, social media, and virtual spaces.',
-    projects: ['Livestreaming communities', 'VTuber culture', 'Social VR interaction', 'Digital labor and gig economy'],
+    title: 'Culture, Platforms & Community',
+    desc: 'How people use digital platforms to preserve cultural practices, learn from one another, and sustain community across distance.',
+    projects: ['Intangible cultural heritage', 'Livestreaming communities', 'Online learning cultures', 'Community knowledge sharing'],
     pubs: ['CSCW 2025', 'CHI 2024', 'CSCW 2024'],
     image: '/images/pub4.jpg',
   },
   {
-    title: 'AI-Mediated Creativity',
-    desc: 'Designing and evaluating systems leveraging LLMs and generative AI to support human creativity, writing, and visual communication.',
-    projects: ['LLM-assisted prewriting', 'Visual diagramming with AI', 'Human-AI co-creativity', 'Generative visual tools'],
+    title: 'Human-AI Social Ecosystems',
+    desc: 'Designing and evaluating systems where generative AI supports communication, reflection, and creativity without flattening human meaning.',
+    projects: ['AI-mediated relationships', 'LLM-assisted prewriting', 'Multi-agent social systems', 'Human-AI co-creativity'],
     pubs: ['CSCW 2025', 'CSCW 2024', 'DIS 2024'],
     image: '/images/pub5.jpg',
   },
   {
-    title: 'Accessible Gaming & Play',
-    desc: 'How people with visual impairments and other disabilities experience and adapt games, and designing more inclusive playful technologies.',
-    projects: ['Blind and low-vision gaming', 'Accessible game design', 'Audio game interfaces', 'Inclusive playtesting'],
+    title: 'Embodied and Playful Experience',
+    desc: 'How people experience presence, play, identity, and accessibility across games, social VR, and embodied digital environments.',
+    projects: ['Accessible gaming', 'Social VR communication', 'Playful captions', 'Inclusive experience design'],
     pubs: ['ASSETS 2025', 'CHI PLAY 2023'],
     image: '/images/userstudy.jpg',
   },
   {
-    title: 'Digital Inclusion & Aging',
-    desc: 'How older adults and underrepresented communities engage with technology, and designing to bridge digital divides.',
-    projects: ['Silver classrooms for seniors', 'Technology adoption in aging', 'Intergenerational computing', 'Community technology programs'],
+    title: 'Digital Access, Aging & Care',
+    desc: 'How older adults and underrepresented communities engage with technology for learning, connection, care, and self-expression.',
+    projects: ['Silver classrooms', 'Technology adoption in aging', 'Intergenerational computing', 'Community technology programs'],
     pubs: ['CSCW 2025', 'ChineseCHI 2024'],
     image: '/images/workshop.jpg',
   },
@@ -66,7 +66,7 @@ export default function ResearchPage() {
           <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>Research</span>
           <h1 className="text-h1 mb-4">What we explore</h1>
           <p className="text-body-lg max-w-[600px]">
-            Four interconnected pillars driving our mission to build more human-centered technology.
+            Four interconnected directions for studying how digital platforms and AI systems shape culture, community, embodiment, and access.
           </p>
         </div>
       </div>
