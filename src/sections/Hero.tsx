@@ -10,7 +10,6 @@ export default function Hero() {
   const labelRef = useRef<HTMLSpanElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const bodyRef = useRef<HTMLParagraphElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Video parallax
@@ -40,9 +39,6 @@ export default function Hero() {
     }
     if (bodyRef.current) {
       tl.fromTo(bodyRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, 0.6);
-    }
-    if (ctaRef.current) {
-      tl.fromTo(ctaRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5 }, 0.8);
     }
   }, []);
 
@@ -100,25 +96,8 @@ export default function Hero() {
             </h1>
 
             <p ref={bodyRef} className="text-[17px] leading-relaxed max-w-[460px] mb-8" style={{ opacity: 0, color: 'rgba(255,255,255,0.7)' }}>
-              DEER Lab explores how technology brings people closer — from livestreaming communities to AI-powered creativity.
+              Digital Experience and Embodied Research Lab explores how technology brings people closer — from livestreaming communities to AI-powered creativity.
             </p>
-
-            <div ref={ctaRef} className="flex flex-wrap items-center gap-5" style={{ opacity: 0 }}>
-              <button
-                onClick={() => document.querySelector('#research')?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-[14px] font-semibold px-6 py-3 rounded-full transition-all duration-200 hover:scale-[1.03] active:scale-[0.97]"
-                style={{ background: '#fff', color: '#1A1A1A' }}
-              >
-                Explore Research
-              </button>
-              <a
-                href="mailto:zhicong.lu@gmu.edu"
-                className="text-[14px] font-medium underline underline-offset-4 hover:opacity-70 transition-opacity"
-                style={{ color: 'rgba(255,255,255,0.75)' }}
-              >
-                Collaborate with us
-              </a>
-            </div>
           </div>
         </div>
       </div>

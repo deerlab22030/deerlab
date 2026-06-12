@@ -41,7 +41,7 @@ export default function Footer() {
               <li><Link to="/research" className="text-[14px] hover:opacity-70 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)' }}>Research</Link></li>
               <li><Link to="/team" className="text-[14px] hover:opacity-70 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)' }}>People</Link></li>
               <li><button onClick={() => scrollTo('#grants')} className="text-[14px] hover:opacity-70 transition-opacity text-left" style={{ color: 'rgba(255,255,255,0.6)' }}>Grants</button></li>
-              <li><Link to="/blog" className="text-[14px] hover:opacity-70 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)' }}>Blog</Link></li>
+              <li><Link to="/blog" className="text-[14px] hover:opacity-70 transition-opacity" style={{ color: 'rgba(255,255,255,0.6)' }}>News</Link></li>
             </ul>
           </div>
           <div>
@@ -71,7 +71,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
           <p className="text-[13px]" style={{ color: 'rgba(255,255,255,0.35)' }}>&copy; 2025 DEER Lab</p>
           <p className="text-[13px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
-            Digital Engagement and Empowerment Research
+            Digital Experience and Embodied Research Lab
           </p>
         </div>
       </div>

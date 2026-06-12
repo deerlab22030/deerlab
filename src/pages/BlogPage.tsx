@@ -73,7 +73,7 @@ export default function BlogPage() {
       {/* Header */}
       <div className="pt-32 pb-12">
         <div className="container-main">
-          <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>Blog</span>
+          <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>News</span>
           <h1 className="text-h1 mb-4">Lab News</h1>
           <p className="text-body-lg max-w-[600px]">
             Updates, reflections, and announcements from DEER Lab.

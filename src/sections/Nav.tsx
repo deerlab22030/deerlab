@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const NAV_ITEMS = [
+  { label: 'News', href: '/blog', isPage: true },
   { label: 'Research', href: '/research', isPage: true },
   { label: 'People', href: '/team', isPage: true },
-  { label: 'Blog', href: '/blog', isPage: true },
   { label: 'Join', href: '/#join', isPage: false },
 ];
 
@@ -47,8 +47,6 @@ export default function Nav() {
 
   const navLinkColor = scrolled || !isHome ? 'var(--text-secondary)' : 'rgba(255,255,255,0.7)';
   const navLinkHoverColor = scrolled || !isHome ? 'var(--text-primary)' : '#fff';
-  const contactBg = scrolled || !isHome ? 'var(--bg-dark)' : 'rgba(255,255,255,0.9)';
-  const contactColor = scrolled || !isHome ? '#fff' : '#1A1A1A';
   const barColor = scrolled || !isHome ? 'bg-black' : 'bg-white';
 
   return (
@@ -67,10 +65,6 @@ export default function Nav() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-3">
-            <a href="mailto:zhicong.lu@gmu.edu" className="text-[13px] font-medium px-5 py-2.5 rounded-full transition-all hover:scale-[1.03]" style={{ background: contactBg, color: contactColor }}>Contact</a>
-          </div>
-
           <button className="md:hidden flex flex-col gap-[4px] p-2" onClick={() => setMobileOpen(!mobileOpen)}>
             <span className={`w-[16px] h-[1.5px] transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-[2.5px] bg-black' : barColor}`} />
             <span className={`w-[16px] h-[1.5px] transition-all duration-300 ${mobileOpen ? 'opacity-0' : barColor}`} />
@@ -86,7 +80,6 @@ export default function Nav() {
           ) : (
             <button key={item.label} onClick={() => handleAnchorClick(item.href)} className="text-left py-3 text-[15px] font-medium" style={{ color: 'var(--text-secondary)' }}>{item.label}</button>
           ))}
-          <a href="mailto:zhicong.lu@gmu.edu" className="mt-3 text-center text-[13px] font-medium px-5 py-2.5 rounded-full text-white" style={{ background: 'var(--bg-dark)' }}>Contact</a>
         </div>
       </div>
     </nav>
