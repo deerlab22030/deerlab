@@ -8,6 +8,7 @@ import ResearchPage from './pages/ResearchPage';
 import TeamPage from './pages/TeamPage';
 import NewsPage from './pages/NewsPage';
 import BlogPage from './pages/BlogPage';
+import WorkWithUsPage from './pages/WorkWithUsPage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/research" element={<ResearchPage />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/work-with-us" element={<WorkWithUsPage />} />
       </Routes>
     </HashRouter>
   );

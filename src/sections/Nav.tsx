@@ -6,7 +6,7 @@ const NAV_ITEMS = [
   { label: 'Research', href: '/research', isPage: true },
   { label: 'People', href: '/team', isPage: true },
   { label: 'Blog', href: '/blog', isPage: true },
-  { label: 'Work with us', href: '/#work-with-us', isPage: false },
+  { label: 'Work with us', href: '/work-with-us', isPage: true },
 ];
 
 export default function Nav() {

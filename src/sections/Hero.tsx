@@ -51,11 +51,11 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="/images/hero.jpg"
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ willChange: 'transform', zIndex: 0 }}
       >
-        <source src="/images/hero-video.mp4" type="video/mp4" />
+        <source src="/images/hero-grok.mp4" type="video/mp4" />
       </video>
 
       {/* Layer 1: Gradient overlay for readability */}
