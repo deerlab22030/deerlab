@@ -5,6 +5,12 @@ import MouseGlow from '../components/MouseGlow';
 
 const NEWS = [
   {
+    title: 'Shiwei presented at Capital Graphics 2026',
+    date: '2026 May',
+    excerpt: "Shiwei Hong presented her work at Capital Graphics 2026, held at George Mason University's FUSE at Mason Square in Arlington.",
+    tag: 'Presentation',
+  },
+  {
     title: 'DEER Lab members joined Microsoft Family Day',
     date: '2026 April',
     excerpt: 'Zhicong Lu, Shiwei Hong, and Junjie Ma were invited to Microsoft Reston for a Family Day event connecting research with local communities.',
