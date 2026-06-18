@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 const NEWS_ITEMS = [
   {
     date: '2026 June',
+    title: 'Why did the AI agent cross the road?',
+    text: "Mason CEC featured Shiwei Hong's collaborative multi-agent AI system for improving machine-generated humor.",
+    href: 'https://cec.gmu.edu/news/2026-06/why-did-ai-agent-cross-road',
+  },
+  {
+    date: '2026 June',
     title: "Zhicong spoke to GMU STIP's AVATAR project",
     text: "Zhicong Lu was invited to give a talk for GMU STIP's AVATAR project.",
     href: 'https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects',
