@@ -5,20 +5,20 @@ import MouseGlow from '../components/MouseGlow';
 
 const NEWS = [
   {
-    title: 'Why did the AI agent cross the road?',
-    date: '2026 June',
-    excerpt: "Mason CEC featured Shiwei Hong's collaborative multi-agent AI system that mimics a comedy writers' room and shows how agent discussion and feedback can improve machine-generated humor.",
-    tag: 'Research',
-    link: 'https://cec.gmu.edu/news/2026-06/why-did-ai-agent-cross-road',
-    linkLabel: 'Read the story',
-  },
-  {
     title: "Zhicong spoke to GMU STIP's AVATAR project",
     date: '2026 June',
     excerpt: "Zhicong Lu was invited to give a talk for GMU STIP's AVATAR (Adaptive Virtual Assistant for Therapeutic Auto-Regulation) project.",
     tag: 'Talk',
     link: 'https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects',
     linkLabel: 'GMU STIP',
+  },
+  {
+    title: 'Why did the AI agent cross the road?',
+    date: '2026 June',
+    excerpt: "Mason CEC featured Shiwei Hong's collaborative multi-agent AI system that mimics a comedy writers' room and shows how agent discussion and feedback can improve machine-generated humor.",
+    tag: 'Research',
+    link: 'https://cec.gmu.edu/news/2026-06/why-did-ai-agent-cross-road',
+    linkLabel: 'Read the story',
   },
   {
     title: 'Shiwei presented at Capital Graphics 2026',
