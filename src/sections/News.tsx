@@ -2,6 +2,12 @@ import { Link } from 'react-router-dom';
 
 const NEWS_ITEMS = [
   {
+    date: '2026 June',
+    title: "Zhicong spoke to GMU STIP's AVATAR project",
+    text: "Zhicong Lu was invited to give a talk for GMU STIP's AVATAR project.",
+    href: 'https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects',
+  },
+  {
     date: '2026 May',
     title: 'Shiwei presented at Capital Graphics 2026',
     text: "Shiwei Hong presented her work at Capital Graphics 2026, held at George Mason University's FUSE at Mason Square in Arlington.",

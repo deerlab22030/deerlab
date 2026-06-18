@@ -5,6 +5,14 @@ import MouseGlow from '../components/MouseGlow';
 
 const NEWS = [
   {
+    title: "Zhicong spoke to GMU STIP's AVATAR project",
+    date: '2026 June',
+    excerpt: "Zhicong Lu was invited to give a talk for GMU STIP's AVATAR (Adaptive Virtual Assistant for Therapeutic Auto-Regulation) project.",
+    tag: 'Talk',
+    link: 'https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects',
+    linkLabel: 'GMU STIP',
+  },
+  {
     title: 'Shiwei presented at Capital Graphics 2026',
     date: '2026 May',
     excerpt: "Shiwei Hong presented her work at Capital Graphics 2026, held at George Mason University's FUSE at Mason Square in Arlington.",
