@@ -10,7 +10,7 @@ const AREAS = [
     title: 'Human-AI Interaction',
     desc: 'Designing and evaluating AI systems for companionship, creativity, interviewing, reviewing, moderation, and multi-agent collaboration.',
     image: '/images/research-human-ai.png',
-    pubs: ['PuppetChat', 'InterFlow', 'ProductMeta', 'RevTogether', 'User-driven value alignment', 'DanModCap'],
+    pubs: ['Multi-Agent Comedy Club', 'PuppetChat', 'InterFlow', 'ProductMeta', 'RevTogether', 'User-driven value alignment'],
   },
   {
     title: 'Social Computing',
@@ -28,11 +28,18 @@ const AREAS = [
     title: 'Natural Language Processing',
     desc: 'Using language, visual analytics, and multimodal AI to support review, sensemaking, moderation, storytelling, and media understanding.',
     image: '/images/research-nlp-visualization.png',
-    pubs: ['The digital landscape of God', 'VisMoDAl', 'LLM-as-a-Reviewer', 'DanModCap'],
+    pubs: ['Multi-Agent Comedy Club', 'The digital landscape of God', 'VisMoDAl', 'LLM-as-a-Reviewer', 'DanModCap'],
   },
 ];
 
 const PUBLICATIONS = [
+  {
+    year: '2026',
+    title: 'Multi-Agent Comedy Club: Investigating Community Discussion Effects on LLM Humor Generation',
+    authors: 'Shiwei Hong, Lingyao Li, Ethan Z. Rong, Chenxinran Shen, and Zhicong Lu',
+    venue: 'Findings of the Association for Computational Linguistics: ACL 2026, 2026',
+    tags: ['Human-AI Interaction', 'Natural Language Processing', 'Multi-Agent Systems', 'ACL'],
+  },
   {
     year: '2026',
     title: 'The digital landscape of God: narrative, visuals and viewer engagement of religious videos on YouTube',
@@ -266,7 +273,7 @@ const PUBLICATIONS = [
   },
 ];
 
-const VENUE_FILTERS = ['All', 'CHI', 'CSCW', 'ASSETS', 'ICWSM', 'Journal', 'Other'];
+const VENUE_FILTERS = ['All', 'CHI', 'CSCW', 'ACL', 'ASSETS', 'ICWSM', 'Journal', 'Other'];
 
 export default function ResearchPage() {
   const [activeArea, setActiveArea] = useState(0);
