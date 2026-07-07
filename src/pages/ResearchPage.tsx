@@ -22,7 +22,7 @@ const THEMES = [
   },
   {
     name: 'Science Communication & Public Sensemaking',
-    desc: 'Public-facing knowledge, story revision, platform narratives, and collective interpretation.',
+    desc: 'Public-facing knowledge, health information, story revision, platform narratives, and collective interpretation.',
     color: '#9A6A1F',
     bg: 'rgba(154,106,31,0.12)',
     border: 'rgba(154,106,31,0.24)',
@@ -41,13 +41,13 @@ const AREAS = [
     title: 'Human-Computer Interaction',
     desc: 'Designing and studying interactive systems for embodied communication, accessibility, creator-viewer interaction, and meaningful digital experience.',
     image: '/images/research-hci-2026.png',
-    pubs: ['ThingMoji', 'SpeechCap', 'PuppetChat', 'Investigating VTubing as a Reconstruction'],
+    pubs: ['Engage Wider Audience or Facilitate Quality Answers', 'The Odyssey Journey', 'ThingMoji', 'SpeechCap'],
   },
   {
     title: 'Human-AI Interaction',
     desc: 'Building and evaluating AI systems that support creativity, interviews, moderation, value alignment, and public-facing communication.',
     image: '/images/research-human-ai-2026.png',
-    pubs: ['RevTogether', 'InterFlow', 'DanModCap', 'User-Driven Value Alignment'],
+    pubs: ['RevTogether', 'InterFlow', 'DanModCap', 'Engage Wider Audience or Facilitate Quality Answers'],
   },
   {
     title: 'Human-Agent Interaction',
@@ -59,7 +59,7 @@ const AREAS = [
     title: 'Social Computing / Computational Social Science',
     desc: 'Understanding online communities, livestreaming, VTuber publics, platform cultures, and public sensemaking through qualitative and computational approaches.',
     image: '/images/research-social-css-2026.png',
-    pubs: ['Live, Learn, and Connect', 'Public Parasocial Grieving and Coping Towards VTuber Graduation and Termination', 'The Digital Landscape of God', 'More Kawaii than a Real-Person Live Streamer'],
+    pubs: ['The Digital Landscape of God', 'Let\'s Influence Algorithms Together', 'Douyin as a Memorial Gathering for CoCo', 'Live, Learn, and Connect'],
   },
 ];
 
@@ -98,6 +98,22 @@ const PUBLICATIONS = [
   },
   {
     year: '2025',
+    title: 'Let\'s Influence Algorithms Together: How Millions of Fans Build Collective Understanding of Algorithms and Organize Coordinated Algorithmic Actions',
+    authors: 'Qing Xiao, Yuhang Zheng, Xianzhe Fan, Bingbing Zhang, and Zhicong Lu',
+    venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
+    link: 'https://dl.acm.org/doi/10.1145/3706598.3713279',
+    tags: ['CHI', 'Social Computing / Computational Social Science', 'Science Communication & Public Sensemaking'],
+  },
+  {
+    year: '2025',
+    title: 'The Odyssey Journey: Top-Tier Medical Resource Seeking for Specialized Disorder in China',
+    authors: 'Ka I Chan, Siying Hu, Yuntao Wang, Xuhai Xu, Zhicong Lu, and Yuanchun Shi',
+    venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
+    link: 'https://dl.acm.org/doi/10.1145/3706598.3713315',
+    tags: ['CHI', 'Human-Computer Interaction', 'Science Communication & Public Sensemaking'],
+  },
+  {
+    year: '2025',
     title: 'Live, Learn, and Connect: Unpacking Live-Streaming-Based Silver Classroom in China',
     authors: 'Ethan Z. Rong, Jifan Shen, Zhicong Lu, and Yuling Sun',
     venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (CSCW), Article 366, 2025',
@@ -111,6 +127,14 @@ const PUBLICATIONS = [
     venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
     link: 'https://dl.acm.org/doi/10.1145/3706598.3714216',
     tags: ['CHI', 'Social Computing / Computational Social Science', 'Human-Computer Interaction', 'VTubers, Avatars & Embodiment'],
+  },
+  {
+    year: '2025',
+    title: 'Douyin as a Memorial Gathering for CoCo: Algorithmic Experiences of Online Collective Mourning',
+    authors: 'Luoying Lin and Zhicong Lu',
+    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (CSCW), 1-22, 2025',
+    link: 'https://dl.acm.org/doi/10.1145/3710964',
+    tags: ['CSCW', 'Social Computing / Computational Social Science', 'Science Communication & Public Sensemaking'],
   },
   {
     year: '2025',
@@ -151,6 +175,14 @@ const PUBLICATIONS = [
     venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
     link: 'https://dl.acm.org/doi/10.1145/3706598.3713477',
     tags: ['CHI', 'Human-AI Interaction', 'Human-Agent Interaction', 'AI Agents for Social Interaction'],
+  },
+  {
+    year: '2024',
+    title: 'Engage Wider Audience or Facilitate Quality Answers? A Mixed-methods Analysis of Questioning Strategies for Research Sensemaking on a Community Q&A Site',
+    authors: 'Changyang He, Yue Deng, Lu He, Qingyu Guo, Yu Zhang, Zhicong Lu, and Bo Li',
+    venue: 'Proceedings of the ACM on Human-Computer Interaction 8 (CSCW), 1-31, 2024',
+    link: 'https://dl.acm.org/doi/10.1145/3637327',
+    tags: ['CSCW', 'Human-Computer Interaction', 'Science Communication & Public Sensemaking'],
   },
   {
     year: '2024',
