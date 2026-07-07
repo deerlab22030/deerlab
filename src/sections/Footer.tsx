@@ -16,7 +16,7 @@ export default function Footer() {
             <div>
               <h4 className="text-[13px] font-semibold mb-4 uppercase tracking-[0.08em]" style={{ color: 'rgba(255,255,255,0.42)' }}>Last Update</h4>
               <div className="text-[14px] leading-relaxed space-y-2" style={{ color: 'rgba(255,255,255,0.66)' }}>
-                <p>July 6, 2026</p>
+                <p>July 7, 2026</p>
                 <p>Homepage hero video generated with Grok.</p>
                 <p>Research page images generated with GPT-Image2.</p>
               </div>
