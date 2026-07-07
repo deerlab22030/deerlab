@@ -7,28 +7,28 @@ const SCHOLAR_URL = 'https://scholar.google.com/citations?hl=en&user=xCxyGuwAAAA
 
 const AREAS = [
   {
-    title: 'Human-AI Interaction',
-    desc: 'Designing and evaluating AI systems for companionship, creativity, interviewing, reviewing, moderation, and multi-agent collaboration.',
+    title: 'Livestreaming Communities',
+    desc: 'Studying live, in-stream, and short-video communities where viewers learn, participate, gift, comment, moderate, and build shared social presence with creators.',
     image: '/images/research-human-ai.png',
-    pubs: ['Multi-Agent Comedy Club', 'PuppetChat', 'InterFlow', 'ProductMeta', 'RevTogether', 'User-driven value alignment'],
+    pubs: ['Live, Learn, and Connect', 'ThingMoji', 'DanModCap', 'More Kawaii than a Real-Person Live Streamer'],
   },
   {
-    title: 'Social Computing',
-    desc: 'Understanding online communities, livestreaming, social media labor, fandom, collective action, mourning, and cultural participation.',
+    title: 'VTubers, Avatars & Embodiment',
+    desc: 'Understanding avatar-mediated performance, VTuber identity, parasocial bonds, social VR, and embodied interfaces that reshape how people appear and relate online.',
     image: '/images/research-social-computing.png',
-    pubs: ['Live, Learn, and Connect', 'Emotions in Fandom Crowdfunding', 'Douyin as a Memorial Gathering for CoCo', 'Let\'s Influence Algorithms Together'],
+    pubs: ['Public Parasocial Grieving and Coping Towards VTuber Graduation and Termination', 'Investigating VTubing as a Reconstruction', 'SpeechCap', 'PuppetChat'],
   },
   {
-    title: 'Human-Computer Interaction',
-    desc: 'Studying embodied experience, accessibility, play, communication, and interactive systems that support people in real-world contexts.',
+    title: 'Science Communication & Public Sensemaking',
+    desc: 'Designing human-AI systems and studying digital media practices that make complex knowledge, science stories, and public-interest narratives more accessible.',
     image: '/images/research-hci-accessibility.png',
-    pubs: ['SpeechCap', 'ThingMoji', 'How users who are blind or low vision play mobile games', 'Understanding How Visually Impaired Players Socialize in Mobile Games'],
+    pubs: ['RevTogether', 'The Digital Landscape of God', 'InterFlow', 'Multi-Agent Comedy Club'],
   },
   {
-    title: 'Natural Language Processing',
-    desc: 'Using language, visual analytics, and multimodal AI to support review, sensemaking, moderation, storytelling, and media understanding.',
+    title: 'AI Agents for Social Interaction',
+    desc: 'Building and evaluating LLM-powered agents, companions, interview scaffolds, moderators, and creative collaborators with attention to agency, safety, and community context.',
     image: '/images/research-nlp-visualization.png',
-    pubs: ['Multi-Agent Comedy Club', 'The digital landscape of God', 'VisMoDAl', 'LLM-as-a-Reviewer', 'DanModCap'],
+    pubs: ['Multi-Agent Comedy Club', 'RevTogether', 'InterFlow', 'User-Driven Value Alignment'],
   },
 ];
 
@@ -38,252 +38,132 @@ const PUBLICATIONS = [
     title: 'Multi-Agent Comedy Club: Investigating Community Discussion Effects on LLM Humor Generation',
     authors: 'Shiwei Hong, Lingyao Li, Ethan Z. Rong, Chenxinran Shen, and Zhicong Lu',
     venue: 'Findings of the Association for Computational Linguistics: ACL 2026, 2026',
-    tags: ['Human-AI Interaction', 'Natural Language Processing', 'Multi-Agent Systems', 'ACL'],
+    link: 'https://aclanthology.org/2026.findings-acl.145',
+    tags: ['ACL', 'Human-AI Interaction', 'Natural Language Processing', 'Avatars & Agents', 'Multi-Agent Systems'],
   },
   {
     year: '2026',
-    title: 'The digital landscape of God: narrative, visuals and viewer engagement of religious videos on YouTube',
-    authors: 'Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, and Zhicong Lu',
-    venue: 'Proceedings of the International AAAI Conference on Web and Social Media, 2026',
-    tags: ['Social Computing', 'Natural Language Processing', 'Online Video', 'ICWSM'],
-  },
-  {
-    year: '2026',
-    title: 'Cultures as Catalysts: Nurturing HCI Communities Across Regions',
-    authors: 'Maristella Matera, Zhicong Lu, Gustavo Lopez, Houda Elmimouni, and Susan Dray',
+    title: 'InterFlow: Designing Unobtrusive AI to Empower Interviewers in Semi-Structured Interviews',
+    authors: 'Yi Wen, Yu Zhang, Sriram Suresh, Zhicong Lu, Can Liu, and Meng Xia',
     venue: 'Proceedings of the Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems, 2026',
-    tags: ['Human-Computer Interaction', 'HCI Communities', 'CHI'],
-  },
-  {
-    year: '2026',
-    title: '“I Will Dream Sweet Dreams”: Understanding Remote Companionship Volunteer Activities for Factual Orphans in Rural China',
-    authors: 'Jingjing Zhang, Yuanrong Tang, Yueqing Hu, Tianhong Wang, Hanchao Song, Zhicong Lu, and Jiangtao Gong',
-    venue: 'Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems, 2026',
-    tags: ['Human-Computer Interaction', 'Social Computing', 'Care', 'CHI'],
-  },
-  {
-    year: '2026',
-    title: 'Sportoonizer: Augmenting Sports Highlights\' Narratives via AI-Generated Manga B-Roll',
-    authors: 'Siying Hu, Jiajun Wang, Xiangzhe Yuan, Jian Ma, Zhiyang Wu, and Zhicong Lu',
-    venue: 'Proceedings of the Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems, 2026',
-    tags: ['Human-AI Interaction', 'Human-Computer Interaction', 'Creative AI', 'CHI'],
+    link: 'https://dl.acm.org/doi/10.1145/3772318.3790866',
+    tags: ['CHI', 'Human-AI Interaction', 'Human-Computer Interaction', 'Avatars & Agents', 'AI Interviewing'],
   },
   {
     year: '2026',
     title: 'PuppetChat: Fostering Intimate Communication through Bidirectional Actions and Micronarratives',
     authors: 'Emma Jiren Wang, Siying Hu, and Zhicong Lu',
     venue: 'Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems, 2026',
-    tags: ['Human-AI Interaction', 'Human-Computer Interaction', 'Intimate Communication', 'CHI'],
+    link: 'https://dl.acm.org/doi/10.1145/3772318.3790685',
+    tags: ['CHI', 'Human-AI Interaction', 'Human-Computer Interaction', 'Avatars & Agents', 'Embodied Communication'],
   },
   {
     year: '2026',
-    title: 'InterFlow: Designing Unobtrusive AI to Empower Interviewers in Semi-Structured Interviews',
-    authors: 'Yi Wen, Yu Zhang, Sriram Suresh, Zhicong Lu, Can Liu, and Meng Xia',
-    venue: 'Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems, 2026',
-    tags: ['Human-AI Interaction', 'Human-Computer Interaction', 'Research Tools', 'CHI'],
-  },
-  {
-    year: '2026',
-    title: 'AI vs. human paintings? Deciphering public interactions and perceptions towards AI-generated paintings on TikTok',
-    authors: 'Jiajun Wang, Xiangzhe Yuan, Siying Hu, and Zhicong Lu',
-    venue: 'International Journal of Human-Computer Interaction 42 (5), 3307-3330, 2026',
-    tags: ['Human-AI Interaction', 'Social Computing', 'Creative AI', 'Journal'],
-  },
-  {
-    year: '2025',
-    title: 'Emotions in Fandom Crowdfunding: Investigating How Online Interactions Affect Collaborative Monetary Activities',
-    authors: 'Molly Zhuangtong Huang, Zhicong Lu, Caishi Huang, Zhenning Li, Hantao Zhao, Xiaobo Zhou, Dazhao Cheng, and Kanye Ye Wang',
-    venue: 'ACM Transactions on Computer-Human Interaction 32 (6), 1-46, 2025',
-    tags: ['Social Computing', 'Human-Computer Interaction', 'Fandom', 'Journal'],
-  },
-  {
-    year: '2025',
-    title: 'Exploring Engagement, Interaction, and Community-Building Among Content Creators and Viewers in RedNote’s Autism-Related Content',
-    authors: 'Yiming Fu, Sichang Su, Jiaan Li, Shuming Yang, Zhicong Lu, and Xin Tong',
-    venue: 'Proceedings of the 2025 International Conference on Human-Engaged Computing, 2025',
-    tags: ['Social Computing', 'Human-Computer Interaction', 'Online Community', 'Other'],
-  },
-  {
-    year: '2025',
-    title: 'VisMoDAl: Visual Analytics for Evaluating and Improving Corruption Robustness of Vision-Language Models',
-    authors: 'Huanchen Wang, Wencheng Zhang, Zhiqiang Wang, Zhicong Lu, and Yuxin Ma',
-    venue: 'IEEE Transactions on Visualization and Computer Graphics, 2025',
-    tags: ['Natural Language Processing', 'Human-AI Interaction', 'Visual Analytics', 'Journal'],
-  },
-  {
-    year: '2025',
-    title: 'Understanding How Visually Impaired Players Socialize in Mobile Games',
-    authors: 'Zihe Ran, Xiyu Li, Qing Xiao, Yanyun Wang, Franklin Mingzhe Li, and Zhicong Lu',
-    venue: 'Proceedings of the 27th International ACM SIGACCESS Conference on Computers and Accessibility, 2025',
-    tags: ['Human-Computer Interaction', 'Accessibility', 'Games', 'ASSETS'],
-  },
-  {
-    year: '2025',
-    title: '“Here Comes the Makeup Tutorial You Asked For!”: Exploring Communication Strategies and Viewer Engagement in Beauty Videos on Rednote',
-    authors: 'Xueer Lin, Chenyu Li, Yuhan Lyu, Zhicong Lu, and Zhenhui Peng',
-    venue: 'Companion Publication of the 2025 Conference on Computer-Supported Cooperative Work and Social Computing, 2025',
-    tags: ['Social Computing', 'Human-Computer Interaction', 'Online Video', 'CSCW'],
+    title: 'The Digital Landscape of God: Narrative, Visuals and Viewer Engagement of Religious Videos on YouTube',
+    authors: 'Rongyi Chen, Ziyan Xin, Qing Xiao, Ruiwei Xiao, Jingjia Xiao, Bingbing Zhang, Hong Shen, and Zhicong Lu',
+    venue: 'Proceedings of the International AAAI Conference on Web and Social Media, 2026',
+    link: 'https://ojs.aaai.org/index.php/ICWSM/article/view/42649',
+    tags: ['ICWSM', 'Social Computing', 'Natural Language Processing', 'Science Communication', 'Online Video'],
   },
   {
     year: '2025',
     title: 'Live, Learn, and Connect: Unpacking Live-Streaming-Based Silver Classroom in China',
     authors: 'Ethan Z. Rong, Jifan Shen, Zhicong Lu, and Yuling Sun',
-    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (7), 1-29, 2025',
-    tags: ['Social Computing', 'Human-Computer Interaction', 'Livestreaming', 'CSCW'],
+    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (CSCW), Article 366, 2025',
+    link: 'https://dl.acm.org/doi/10.1145/3757436',
+    tags: ['CSCW', 'Social Computing', 'Human-Computer Interaction', 'Livestreaming', 'Online Learning'],
+  },
+  {
+    year: '2025',
+    title: '"Can\'t believe I\'m crying over an anime girl": Public Parasocial Grieving and Coping Towards VTuber Graduation and Termination',
+    authors: 'Ken Jen Lee, PiaoHong Wang, and Zhicong Lu',
+    venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
+    link: 'https://dl.acm.org/doi/10.1145/3706598.3714216',
+    tags: ['CHI', 'Social Computing', 'Human-Computer Interaction', 'VTubers', 'Parasocial Relationships'],
   },
   {
     year: '2025',
     title: 'ThingMoji: User-Captured Cut-Outs For In-Stream Visual Communication',
     authors: 'Erzhen Hu, Qian Wan, Changkong Zhou, Md Aashikur Rahman Azim, PiaoHong Wang, Xingyi Hu, Yuhan Zeng, Zhicong Lu, and Seongkook Heo',
-    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (7), 1-29, 2025',
-    tags: ['Human-Computer Interaction', 'Social Computing', 'Visual Communication', 'CSCW'],
-  },
-  {
-    year: '2025',
-    title: 'Online Game Players on Peer-to-Peer Trading Platform: An Infrastructure Perspective',
-    authors: 'PiaoHong Wang, Yao Lyu, and Zhicong Lu',
-    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (7), 1-24, 2025',
-    tags: ['Social Computing', 'Human-Computer Interaction', 'Games', 'CSCW'],
-  },
-  {
-    year: '2025',
-    title: 'SpeechCap: Leveraging Playful Impact Captions to Facilitate Interpersonal Communication in Social Virtual Reality',
-    authors: 'Yu Zhang, Yi Wen, Siying Hu, and Zhicong Lu',
-    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (7), 1-33, 2025',
-    tags: ['Human-Computer Interaction', 'Human-AI Interaction', 'Social VR', 'CSCW'],
-  },
-  {
-    year: '2025',
-    title: 'Polymind: Parallel Visual Diagramming with Large Language Models to Support Prewriting Through Microtasks',
-    authors: 'Qian Wan, Jiannan Li, Huanchen Wang, and Zhicong Lu',
-    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (7), 1-29, 2025',
-    tags: ['Human-AI Interaction', 'Natural Language Processing', 'Creativity Support', 'CSCW'],
-  },
-  {
-    year: '2025',
-    title: 'From digital art to crypto art: The evolution of art brought by NFT',
-    authors: 'Maggie Yongqi Guan, Jiliang Li, Junjie Hu, Zhenqing Gu, Yuyi Wang, Zhicong Lu, and Kanye Ye Wang',
-    venue: 'International Journal of Human-Computer Interaction 41 (12), 7384-7403, 2025',
-    tags: ['Human-Computer Interaction', 'Social Computing', 'Digital Art', 'Journal'],
-  },
-  {
-    year: '2025',
-    title: 'The Configuration of Space: Probing the Way Social Interaction and Perception are Affected by Task-Specific Spatial Representations in Online Video Communication',
-    authors: 'Yihuan Chen, Kexue Fu, Qianyi Chen, Zhicong Lu, and Ray LC',
-    venue: 'International Conference on Human-Computer Interaction, 113-132, 2025',
-    tags: ['Human-Computer Interaction', 'Social Computing', 'Video Communication', 'Other'],
-  },
-  {
-    year: '2025',
-    title: 'How Social Media Plays A Role in Stay-At-Home-Moms’ Transition: A Case Study in China',
-    authors: 'Xinyi Zhang, Minzhu Zhao, Yaxing Yao, and Zhicong Lu',
-    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (2), 1-18, 2025',
-    tags: ['Social Computing', 'Human-Computer Interaction', 'Digital Care', 'CSCW'],
-  },
-  {
-    year: '2025',
-    title: 'Douyin as a Memorial Gathering for CoCo: Algorithmic Experiences of Online Collective Mourning',
-    authors: 'Luoying Lin and Zhicong Lu',
-    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (2), 1-22, 2025',
-    tags: ['Social Computing', 'Human-Computer Interaction', 'Collective Mourning', 'CSCW'],
-  },
-  {
-    year: '2025',
-    title: 'Behind the Same Mask: Understanding the Practice of Spontaneous Collective Anonymity on Chinese Social Platforms',
-    authors: 'Suqi Lou, Weijun Li, Chao Zhang, Shi Chen, Zhicong Lu, and Yaxing Yao',
-    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (2), 1-31, 2025',
-    tags: ['Social Computing', 'Human-Computer Interaction', 'Anonymity', 'CSCW'],
+    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (CSCW), Article 406, 2025',
+    link: 'https://dl.acm.org/doi/10.1145/3757676',
+    tags: ['CSCW', 'Human-Computer Interaction', 'Social Computing', 'Livestreaming', 'Visual Communication'],
   },
   {
     year: '2025',
     title: 'DanModCap: Designing a Danmaku Moderation Tool for Video-Sharing Platforms that Leverages Impact Captions with Large Language Models',
     authors: 'Siying Hu, Huanchen Wang, Yu Zhang, Piaohong Wang, and Zhicong Lu',
-    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (2), 1-27, 2025',
-    tags: ['Human-AI Interaction', 'Natural Language Processing', 'Content Moderation', 'CSCW'],
+    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (CSCW), Article 144, 2025',
+    link: 'https://dl.acm.org/doi/10.1145/3710954',
+    tags: ['CSCW', 'Human-AI Interaction', 'Natural Language Processing', 'Livestreaming', 'Content Moderation'],
   },
   {
     year: '2025',
-    title: 'Bridging Gaps in HCI: Advancing Education, Research, and Careers in Asia',
-    authors: 'Dilrukshi Gamage, Shiwei Cheng, Preeti Mudliar, Zhicong Lu, Shengdong Zhao, Nova Ahmed, Xiaojuan Ma, Uichin Lee, and Ding Wang',
-    venue: 'Proceedings of the Extended Abstracts of the CHI Conference on Human Factors in Computing Systems, 2025',
-    tags: ['Human-Computer Interaction', 'HCI Education', 'CHI'],
-  },
-  {
-    year: '2025',
-    title: 'ProductMeta: An interactive System for metaphorical product design ideation with multimodal large Language models',
-    authors: 'Qinyi Zhou, Jie Deng, Yu Liu, Yun Wang, Yan Xia, Yang Ou, Zhicong Lu, Sai Ma, Scarlett Li, and Yingqing Xu',
-    venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
-    tags: ['Human-AI Interaction', 'Natural Language Processing', 'Design Ideation', 'CHI'],
-  },
-  {
-    year: '2025',
-    title: '“Douyin is My Nourishment of the Mind”: Exploring the Infrastructuralization Process of Short Video Sharing Platforms From Rural People’s Perspective',
-    authors: 'Yuling Sun, Minglong Tang, Zhicong Lu, and Liang He',
-    venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
-    tags: ['Social Computing', 'Human-Computer Interaction', 'Rural Platforms', 'CHI'],
-  },
-  {
-    year: '2025',
-    title: 'The Odyssey Journey: Top-Tier Medical Resource Seeking for Specialized Disorder in China',
-    authors: 'Ka I Chan, Siying Hu, Yuntao Wang, Xuhai Xu, Zhicong Lu, and Yuanchun Shi',
-    venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
-    tags: ['Human-Computer Interaction', 'Social Computing', 'Health Information', 'CHI'],
-  },
-  {
-    year: '2025',
-    title: '“Can’t believe I’m crying over an anime girl”: Public Parasocial Grieving and Coping Towards VTuber Graduation and Termination',
-    authors: 'Ken Jen Lee, PiaoHong Wang, and Zhicong Lu',
-    venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
-    tags: ['Social Computing', 'Human-Computer Interaction', 'VTubing', 'CHI'],
+    title: 'SpeechCap: Leveraging Playful Impact Captions to Facilitate Interpersonal Communication in Social Virtual Reality',
+    authors: 'Yu Zhang, Yi Wen, Siying Hu, and Zhicong Lu',
+    venue: 'Proceedings of the ACM on Human-Computer Interaction 9 (CSCW), Article 358, 2025',
+    link: 'https://dl.acm.org/doi/10.1145/3757427',
+    tags: ['CSCW', 'Human-Computer Interaction', 'Human-AI Interaction', 'Avatars & Agents', 'Social VR'],
   },
   {
     year: '2025',
     title: 'RevTogether: Supporting Science Story Revision with Multiple AI Agents',
     authors: 'Yu Zhang, Kexue Fu, and Zhicong Lu',
     venue: 'Proceedings of the Extended Abstracts of the CHI Conference on Human Factors in Computing Systems, 2025',
-    tags: ['Human-AI Interaction', 'Natural Language Processing', 'Multi-Agent Systems', 'CHI'],
+    link: 'https://dl.acm.org/doi/10.1145/3706599.3719888',
+    tags: ['CHI', 'Human-AI Interaction', 'Natural Language Processing', 'Science Communication', 'Avatars & Agents'],
   },
   {
     year: '2025',
-    title: 'How users who are blind or low vision play mobile games: Perceptions, challenges, and strategies',
-    authors: 'Zihe Ran, Xiyu Li, Qing Xiao, Xianzhe Fan, Franklin Mingzhe Li, Yanyun Wang, and Zhicong Lu',
-    venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
-    tags: ['Human-Computer Interaction', 'Accessibility', 'Games', 'CHI'],
-  },
-  {
-    year: '2025',
-    title: 'HarmonyCut: Supporting creative Chinese paper-cutting design with form and connotation harmony',
-    authors: 'Huanchen Wang, Tianrun Qiu, Jiaping Li, Zhicong Lu, and Yuxin Ma',
-    venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
-    tags: ['Human-AI Interaction', 'Human-Computer Interaction', 'Cultural Creativity', 'CHI'],
-  },
-  {
-    year: '2025',
-    title: 'Let’s Influence Algorithms Together: How Millions of Fans Build Collective Understanding of Algorithms and Organize Coordinated Algorithmic Actions',
-    authors: 'Qing Xiao, Yuhang Zheng, Xianzhe Fan, Bingbing Zhang, and Zhicong Lu',
-    venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
-    tags: ['Social Computing', 'Human-Computer Interaction', 'Algorithmic Action', 'CHI'],
-  },
-  {
-    year: '2025',
-    title: 'User-driven value alignment: Understanding users’ perceptions and strategies for addressing biased and discriminatory statements in AI companions',
+    title: 'User-Driven Value Alignment: Understanding Users\' Perceptions and Strategies for Addressing Biased and Discriminatory Statements in AI Companions',
     authors: 'Xianzhe Fan, Qing Xiao, Xuhui Zhou, Jiaxin Pei, Maarten Sap, Zhicong Lu, and Hong Shen',
     venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
-    tags: ['Human-AI Interaction', 'Natural Language Processing', 'AI Companions', 'CHI'],
+    link: 'https://dl.acm.org/doi/10.1145/3706598.3713477',
+    tags: ['CHI', 'Human-AI Interaction', 'Natural Language Processing', 'Avatars & Agents', 'AI Companions'],
+  },
+  {
+    year: '2024',
+    title: 'Investigating VTubing as a Reconstruction of Streamer Self-Presentation: Identity, Performance, and Gender',
+    authors: 'Qian Wan and Zhicong Lu',
+    venue: 'Proceedings of the ACM on Human-Computer Interaction 8 (CSCW), Article 80, 2024',
+    link: 'https://dl.acm.org/doi/10.1145/3637357',
+    tags: ['CSCW', 'Human-Computer Interaction', 'Social Computing', 'VTubers', 'Livestreaming'],
+  },
+  {
+    year: '2021',
+    title: 'More Kawaii than a Real-Person Live Streamer: Understanding How the Otaku Community Engages with and Perceives Virtual YouTubers',
+    authors: 'Zhicong Lu, Chenxinran Shen, Jiannan Li, Hong Shen, and Daniel Wigdor',
+    venue: 'Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems, 2021',
+    link: 'https://dl.acm.org/doi/10.1145/3411764.3445660',
+    tags: ['CHI', 'Social Computing', 'Human-Computer Interaction', 'VTubers', 'Livestreaming'],
   },
 ];
 
 const VENUE_FILTERS = ['All', 'CHI', 'CSCW', 'ACL', 'ASSETS', 'ICWSM', 'Journal', 'Other'];
+const THEME_FILTERS = ['All themes', 'Human-AI Interaction', 'Social Computing', 'Human-Computer Interaction', 'Natural Language Processing'];
+
+const pubByTitle = new Map(PUBLICATIONS.map((pub) => [pub.title, pub]));
+
+const getPublication = (label: string) => {
+  const exact = pubByTitle.get(label);
+  if (exact) return exact;
+  return PUBLICATIONS.find((pub) => pub.title.includes(label));
+};
 
 export default function ResearchPage() {
   const [activeArea, setActiveArea] = useState(0);
   const [venueFilter, setVenueFilter] = useState('All');
+  const [themeFilter, setThemeFilter] = useState('All themes');
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const filtered = venueFilter === 'All' ? PUBLICATIONS : PUBLICATIONS.filter((pub) => pub.tags.includes(venueFilter));
+  const filtered = PUBLICATIONS.filter((pub) => {
+    const venueMatch = venueFilter === 'All' || pub.tags.includes(venueFilter);
+    const themeMatch = themeFilter === 'All themes' || pub.tags.includes(themeFilter);
+    return venueMatch && themeMatch;
+  });
 
   return (
     <div className="min-h-[100dvh]" style={{ background: 'var(--bg-primary)' }}>
@@ -295,7 +175,7 @@ export default function ResearchPage() {
           <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>Research</span>
           <h1 className="text-h1 mb-4">Research</h1>
           <p className="text-body-lg max-w-[720px]">
-            2025-2026 published work by Zhicong Lu and collaborators, organized around human-AI interaction, social computing, HCI, and NLP-driven sensemaking.
+            DEER Lab studies livestreaming, VTubers, science communication, avatars, and AI agents as connected sites where digital experience becomes social, embodied, and community-shaped.
           </p>
         </div>
       </div>
@@ -329,9 +209,23 @@ export default function ResearchPage() {
               <div>
                 <h3 className="text-label mb-3">Recent Publications</h3>
                 <div className="flex flex-wrap gap-2">
-                  {AREAS[activeArea].pubs.map((p) => (
-                    <span key={p} className="text-[13px] font-medium px-3 py-1.5 rounded-full" style={{ background: 'rgba(45,106,79,0.08)', color: '#2D6A4F' }}>{p}</span>
-                  ))}
+                  {AREAS[activeArea].pubs.map((p) => {
+                    const pub = getPublication(p);
+                    return pub ? (
+                      <a
+                        key={p}
+                        href={pub.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[13px] font-medium px-3 py-1.5 rounded-full transition-all hover:-translate-y-0.5"
+                        style={{ background: 'rgba(45,106,79,0.08)', color: '#2D6A4F' }}
+                      >
+                        {p}
+                      </a>
+                    ) : (
+                      <span key={p} className="text-[13px] font-medium px-3 py-1.5 rounded-full" style={{ background: 'rgba(45,106,79,0.08)', color: '#2D6A4F' }}>{p}</span>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -348,21 +242,39 @@ export default function ResearchPage() {
               <span className="text-label block mb-4" style={{ color: '#2D6A4F' }}>Publications</span>
               <h2 className="text-h3">Published work</h2>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {VENUE_FILTERS.map((venue) => (
-                <button
-                  key={venue}
-                  onClick={() => setVenueFilter(venue)}
-                  className="text-[13px] font-medium px-4 py-2 rounded-full transition-all"
-                  style={{
-                    background: venueFilter === venue ? 'var(--bg-dark)' : 'transparent',
-                    color: venueFilter === venue ? '#fff' : 'var(--text-secondary)',
-                    border: venueFilter === venue ? 'none' : '1px solid var(--border)',
-                  }}
-                >
-                  {venue}
-                </button>
-              ))}
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-wrap gap-2 justify-start md:justify-end">
+                {VENUE_FILTERS.map((venue) => (
+                  <button
+                    key={venue}
+                    onClick={() => setVenueFilter(venue)}
+                    className="text-[13px] font-medium px-4 py-2 rounded-full transition-all"
+                    style={{
+                      background: venueFilter === venue ? 'var(--bg-dark)' : 'transparent',
+                      color: venueFilter === venue ? '#fff' : 'var(--text-secondary)',
+                      border: venueFilter === venue ? 'none' : '1px solid var(--border)',
+                    }}
+                  >
+                    {venue}
+                  </button>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-2 justify-start md:justify-end">
+                {THEME_FILTERS.map((theme) => (
+                  <button
+                    key={theme}
+                    onClick={() => setThemeFilter(theme)}
+                    className="text-[13px] font-medium px-4 py-2 rounded-full transition-all"
+                    style={{
+                      background: themeFilter === theme ? 'rgba(45,106,79,0.12)' : 'transparent',
+                      color: themeFilter === theme ? '#2D6A4F' : 'var(--text-secondary)',
+                      border: themeFilter === theme ? '1px solid rgba(45,106,79,0.18)' : '1px solid var(--border)',
+                    }}
+                  >
+                    {theme}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -374,12 +286,16 @@ export default function ResearchPage() {
                     <span className="font-mono text-[13px]" style={{ color: 'var(--text-muted)' }}>{pub.year}</span>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-[18px] leading-snug mb-2">{pub.title}</h3>
+                    <h3 className="font-semibold text-[18px] leading-snug mb-2">
+                      <a href={pub.link} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#2D6A4F]">
+                        {pub.title}
+                      </a>
+                    </h3>
                     <p className="text-[14px] mb-1" style={{ color: 'var(--text-secondary)' }}>{pub.authors}</p>
                     <p className="text-[14px] mb-4" style={{ color: 'var(--text-muted)' }}>{pub.venue}</p>
                     <div className="flex flex-wrap gap-2">
                       {pub.tags.map((tag) => (
-                        <span key={tag} className="tag text-[11px]">{tag}</span>
+                        <a key={tag} href={pub.link} target="_blank" rel="noopener noreferrer" className="tag text-[11px] transition-opacity hover:opacity-70">{tag}</a>
                       ))}
                     </div>
                   </div>
