@@ -41,13 +41,13 @@ const AREAS = [
     title: 'Human-Computer Interaction',
     desc: 'Designing and studying interactive systems for embodied communication, accessibility, creator-viewer interaction, and meaningful digital experience.',
     image: '/images/research-hci-2026.png',
-    pubs: ['Engage Wider Audience or Facilitate Quality Answers', 'The Odyssey Journey', 'ThingMoji', 'SpeechCap'],
+    pubs: ['It\'s Just Part of Me', 'ThingMoji', 'SpeechCap', 'Engage Wider Audience or Facilitate Quality Answers'],
   },
   {
     title: 'Human-AI Interaction',
     desc: 'Building and evaluating AI systems that support creativity, interviews, moderation, value alignment, and public-facing communication.',
     image: '/images/research-human-ai-2026.png',
-    pubs: ['RevTogether', 'InterFlow', 'DanModCap', 'Engage Wider Audience or Facilitate Quality Answers'],
+    pubs: ['RevTogether', 'InterFlow', 'DanModCap', 'User-Driven Value Alignment'],
   },
   {
     title: 'Human-Agent Interaction',
@@ -59,7 +59,7 @@ const AREAS = [
     title: 'Social Computing / Computational Social Science',
     desc: 'Understanding online communities, livestreaming, VTuber publics, platform cultures, and public sensemaking through qualitative and computational approaches.',
     image: '/images/research-social-css-2026.png',
-    pubs: ['The Digital Landscape of God', 'Let\'s Influence Algorithms Together', 'Douyin as a Memorial Gathering for CoCo', 'Live, Learn, and Connect'],
+    pubs: ['You Watch, You Give, and You Engage', 'The Digital Landscape of God', 'Let\'s Influence Algorithms Together', 'More Kawaii than a Real-Person Live Streamer'],
   },
 ];
 
@@ -103,14 +103,6 @@ const PUBLICATIONS = [
     venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
     link: 'https://dl.acm.org/doi/10.1145/3706598.3713279',
     tags: ['CHI', 'Social Computing / Computational Social Science', 'Science Communication & Public Sensemaking'],
-  },
-  {
-    year: '2025',
-    title: 'The Odyssey Journey: Top-Tier Medical Resource Seeking for Specialized Disorder in China',
-    authors: 'Ka I Chan, Siying Hu, Yuntao Wang, Xuhai Xu, Zhicong Lu, and Yuanchun Shi',
-    venue: 'Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 2025',
-    link: 'https://dl.acm.org/doi/10.1145/3706598.3713315',
-    tags: ['CHI', 'Human-Computer Interaction', 'Science Communication & Public Sensemaking'],
   },
   {
     year: '2025',
@@ -193,6 +185,22 @@ const PUBLICATIONS = [
     tags: ['CSCW', 'Human-Computer Interaction', 'Social Computing / Computational Social Science', 'VTubers, Avatars & Embodiment', 'Livestreaming'],
   },
   {
+    year: '2023',
+    title: 'Understanding Communication Strategies and Viewer Engagement with Science Knowledge Videos on Bilibili',
+    authors: 'Yu Zhang, Changyang He, Huanchen Wang, and Zhicong Lu',
+    venue: 'Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems, 2023',
+    link: 'https://dl.acm.org/doi/10.1145/3544548.3581476',
+    tags: ['CHI', 'Human-Computer Interaction', 'Science Communication & Public Sensemaking'],
+  },
+  {
+    year: '2022',
+    title: '“It’s Just Part of Me:” Understanding Avatar Diversity and Self-presentation of People with Disabilities in Social Virtual Reality',
+    authors: 'Kexin Zhang, Elmira Deldari, Zhicong Lu, Yaxing Yao, and Yuhang Zhao',
+    venue: 'Proceedings of the 24th International ACM SIGACCESS Conference on Computers and Accessibility, 2022',
+    link: 'https://dl.acm.org/doi/10.1145/3517428.3544829',
+    tags: ['ASSETS', 'Human-Computer Interaction', 'VTubers, Avatars & Embodiment'],
+  },
+  {
     year: '2021',
     title: 'More Kawaii than a Real-Person Live Streamer: Understanding How the Otaku Community Engages with and Perceives Virtual YouTubers',
     authors: 'Zhicong Lu, Chenxinran Shen, Jiannan Li, Hong Shen, and Daniel Wigdor',
@@ -200,9 +208,17 @@ const PUBLICATIONS = [
     link: 'https://dl.acm.org/doi/10.1145/3411764.3445660',
     tags: ['CHI', 'Social Computing / Computational Social Science', 'Human-Computer Interaction', 'VTubers, Avatars & Embodiment', 'Livestreaming'],
   },
+  {
+    year: '2018',
+    title: 'You Watch, You Give, and You Engage: A Study of Live Streaming Practices in China',
+    authors: 'Zhicong Lu, Haijun Xia, Seongkook Heo, and Daniel Wigdor',
+    venue: 'Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems, 2018',
+    link: 'https://dl.acm.org/doi/10.1145/3173574.3174040',
+    tags: ['CHI', 'Human-Computer Interaction', 'Social Computing / Computational Social Science', 'Livestreaming'],
+  },
 ];
 
-const VENUE_FILTERS = ['All', 'CHI', 'CSCW', 'ACL', 'ICWSM'];
+const VENUE_FILTERS = ['All', 'CHI', 'CSCW', 'ACL', 'ASSETS', 'ICWSM'];
 
 const pubByTitle = new Map(PUBLICATIONS.map((pub) => [pub.title, pub]));
 const themeByName = new Map(THEMES.map((theme) => [theme.name, theme]));
