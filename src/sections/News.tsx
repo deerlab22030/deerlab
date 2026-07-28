@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 const NEWS_ITEMS = [
   {
     date: '2026 June',
-    title: "Zhicong spoke to GMU STIP's AVATAR project",
-    text: "Zhicong Lu was invited to give a talk for GMU STIP's AVATAR project.",
-    href: 'https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects',
+    title: "Junjie, Weisen, and Zhicong helped guide GMU STIP's AVATAR project",
+    text: 'Junjie Ma, Weisen Zhao, and Zhicong Lu contributed guidance to AVATAR, an adaptive support system for individuals in addiction recovery.',
+    href: 'https://avatar-mocha.vercel.app/',
   },
   {
     date: '2026 June',

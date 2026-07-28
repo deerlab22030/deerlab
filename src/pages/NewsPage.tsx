@@ -5,12 +5,12 @@ import MouseGlow from '../components/MouseGlow';
 
 const NEWS = [
   {
-    title: "Zhicong spoke to GMU STIP's AVATAR project",
+    title: "Junjie, Weisen, and Zhicong helped guide GMU STIP's AVATAR project",
     date: '2026 June',
-    excerpt: "Zhicong Lu was invited to give a talk for GMU STIP's AVATAR (Adaptive Virtual Assistant for Therapeutic Auto-Regulation) project.",
-    tag: 'Talk',
-    link: 'https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects',
-    linkLabel: 'GMU STIP',
+    excerpt: 'Junjie Ma, Weisen Zhao, and Zhicong Lu contributed guidance to AVATAR (Adaptive Virtual Assistant for Therapeutic Auto-Regulation), a GMU STIP project developing adaptive support for individuals in addiction recovery.',
+    tag: 'Mentorship',
+    link: 'https://avatar-mocha.vercel.app/',
+    linkLabel: 'Visit the AVATAR project',
   },
   {
     title: 'Why did the AI agent cross the road?',
