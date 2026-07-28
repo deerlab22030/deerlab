@@ -6,6 +6,8 @@ const NEWS_ITEMS = [
     title: "Junjie, Weisen, and Zhicong helped guide GMU STIP's AVATAR project",
     text: 'Junjie Ma, Weisen Zhao, and Zhicong Lu contributed guidance to AVATAR, an adaptive support system for individuals in addiction recovery.',
     href: 'https://avatar-mocha.vercel.app/',
+    relatedHref: 'https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects',
+    relatedLabel: 'GMU STIP',
   },
   {
     date: '2026 June',
@@ -69,6 +71,14 @@ export default function News() {
                     </Link>
                   )}
                   <span className="text-[15px] md:text-[16px] leading-relaxed" style={{ color: 'var(--text-primary)' }}> {item.text}</span>
+                  {item.relatedHref && (
+                    <>
+                      <span className="text-[15px] md:text-[16px]" style={{ color: 'var(--text-primary)' }}> </span>
+                      <a href={item.relatedHref} target="_blank" rel="noopener noreferrer" className="text-[14px] font-medium underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
+                        {item.relatedLabel}
+                      </a>
+                    </>
+                  )}
                 </div>
               </article>
             ))}

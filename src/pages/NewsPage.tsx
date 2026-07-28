@@ -11,6 +11,8 @@ const NEWS = [
     tag: 'Mentorship',
     link: 'https://avatar-mocha.vercel.app/',
     linkLabel: 'Visit the AVATAR project',
+    relatedLink: 'https://provost.gmu.edu/academics/undergraduate-education/mason-impact/summer-team-impact-projects',
+    relatedLinkLabel: 'GMU STIP',
   },
   {
     title: 'Why did the AI agent cross the road?',
@@ -87,10 +89,19 @@ export default function NewsPage() {
                 <div className="md:col-span-7">
                   <h2 className="font-serif text-[26px] leading-tight mb-3">{item.title}</h2>
                   <p className="text-body">{item.excerpt}</p>
-                  {item.link && (
-                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex mt-4 text-[14px] font-medium underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
-                      {item.linkLabel}
-                    </a>
+                  {(item.link || item.relatedLink) && (
+                    <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4">
+                      {item.link && (
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex text-[14px] font-medium underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
+                          {item.linkLabel}
+                        </a>
+                      )}
+                      {item.relatedLink && (
+                        <a href={item.relatedLink} target="_blank" rel="noopener noreferrer" className="inline-flex text-[14px] font-medium underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
+                          {item.relatedLinkLabel}
+                        </a>
+                      )}
+                    </div>
                   )}
                 </div>
                 <div className="md:col-span-3 md:text-right">
