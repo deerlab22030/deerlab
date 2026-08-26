@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom';
 
 const NEWS_ITEMS = [
   {
+    date: '2026 August',
+    title: 'Paper accepted to the EMNLP 2026 Main Conference',
+    text: 'Our social-pragmatic inference benchmark paper was accepted. The full paper will be made public after the camera-ready version is completed.',
+  },
+  {
     date: '2026 June',
     title: "Junjie, Weisen, and Zhicong helped guide GMU STIP's AVATAR project",
     text: 'Junjie Ma, Weisen Zhao, and Zhicong Lu contributed guidance to AVATAR, an adaptive support system for individuals in addiction recovery.',

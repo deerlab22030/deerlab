@@ -8,6 +8,7 @@ import ResearchPage from './pages/ResearchPage';
 import TeamPage from './pages/TeamPage';
 import NewsPage from './pages/NewsPage';
 import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 import WorkWithUsPage from './pages/WorkWithUsPage';
 import PageMotion from './components/PageMotion';
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/research" element={<PageMotion><ResearchPage /></PageMotion>} />
         <Route path="/team" element={<PageMotion><TeamPage /></PageMotion>} />
         <Route path="/blog" element={<PageMotion><BlogPage /></PageMotion>} />
+        <Route path="/blog/beyond-irony-emnlp-2026" element={<PageMotion><BlogPostPage /></PageMotion>} />
         <Route path="/work-with-us" element={<PageMotion><WorkWithUsPage /></PageMotion>} />
       </Routes>
     </HashRouter>

@@ -3,7 +3,26 @@ import Nav from '../sections/Nav';
 import Footer from '../sections/Footer';
 import MouseGlow from '../components/MouseGlow';
 
-const NEWS = [
+type NewsItem = {
+  title: string;
+  date: string;
+  excerpt: string;
+  tag: string;
+  image?: string;
+  link?: string;
+  linkLabel?: string;
+  relatedLink?: string;
+  relatedLinkLabel?: string;
+};
+
+const NEWS: NewsItem[] = [
+  {
+    title: 'Paper accepted to the EMNLP 2026 Main Conference',
+    date: '2026 August',
+    excerpt: '“You Really Didn’t Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments” has been accepted to the EMNLP 2026 Main Conference. The full paper will be made public after the camera-ready version is completed.',
+    tag: 'Publication',
+    image: '/images/emnlp-2026-acceptance.png',
+  },
   {
     title: "Junjie, Weisen, and Zhicong helped guide GMU STIP's AVATAR project",
     date: '2026 June',
@@ -86,7 +105,7 @@ export default function NewsPage() {
                 <div className="md:col-span-2">
                   <p className="text-[13px] font-mono" style={{ color: 'var(--text-muted)' }}>{item.date}</p>
                 </div>
-                <div className="md:col-span-7">
+                <div className={item.image ? 'md:col-span-5' : 'md:col-span-7'}>
                   <h2 className="font-serif text-[26px] leading-tight mb-3">{item.title}</h2>
                   <p className="text-body">{item.excerpt}</p>
                   {(item.link || item.relatedLink) && (
@@ -104,6 +123,11 @@ export default function NewsPage() {
                     </div>
                   )}
                 </div>
+                {item.image && (
+                  <div className="md:col-span-2">
+                    <img src={item.image} alt="EMNLP 2026 Main Conference acceptance decision" className="w-full rounded-[10px] border object-cover" style={{ borderColor: 'var(--border)' }} />
+                  </div>
+                )}
                 <div className="md:col-span-3 md:text-right">
                   <span className="tag text-[11px] mb-3">{item.tag}</span>
                 </div>
