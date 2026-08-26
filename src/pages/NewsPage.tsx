@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Nav from '../sections/Nav';
 import Footer from '../sections/Footer';
 import MouseGlow from '../components/MouseGlow';
@@ -8,7 +9,7 @@ type NewsItem = {
   date: string;
   excerpt: string;
   tag: string;
-  image?: string;
+  internalLink?: string;
   link?: string;
   linkLabel?: string;
   relatedLink?: string;
@@ -21,7 +22,8 @@ const NEWS: NewsItem[] = [
     date: '2026 August',
     excerpt: '“You Really Didn’t Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments” has been accepted to the EMNLP 2026 Main Conference. The full paper will be made public after the camera-ready version is completed.',
     tag: 'Publication',
-    image: '/images/emnlp-2026-acceptance.png',
+    internalLink: '/blog/beyond-irony-emnlp-2026',
+    linkLabel: 'Read the story on our blog',
   },
   {
     title: "Junjie, Weisen, and Zhicong helped guide GMU STIP's AVATAR project",
@@ -105,11 +107,16 @@ export default function NewsPage() {
                 <div className="md:col-span-2">
                   <p className="text-[13px] font-mono" style={{ color: 'var(--text-muted)' }}>{item.date}</p>
                 </div>
-                <div className={item.image ? 'md:col-span-5' : 'md:col-span-7'}>
+                <div className="md:col-span-7">
                   <h2 className="font-serif text-[26px] leading-tight mb-3">{item.title}</h2>
                   <p className="text-body">{item.excerpt}</p>
-                  {(item.link || item.relatedLink) && (
+                  {(item.internalLink || item.link || item.relatedLink) && (
                     <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4">
+                      {item.internalLink && (
+                        <Link to={item.internalLink} className="inline-flex text-[14px] font-medium underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
+                          {item.linkLabel}
+                        </Link>
+                      )}
                       {item.link && (
                         <a href={item.link} target="_blank" rel="noopener noreferrer" className="inline-flex text-[14px] font-medium underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
                           {item.linkLabel}
@@ -123,11 +130,6 @@ export default function NewsPage() {
                     </div>
                   )}
                 </div>
-                {item.image && (
-                  <div className="md:col-span-2">
-                    <img src={item.image} alt="EMNLP 2026 Main Conference acceptance decision" className="w-full rounded-[10px] border object-cover" style={{ borderColor: 'var(--border)' }} />
-                  </div>
-                )}
                 <div className="md:col-span-3 md:text-right">
                   <span className="tag text-[11px] mb-3">{item.tag}</span>
                 </div>

@@ -4,7 +4,9 @@ const NEWS_ITEMS = [
   {
     date: '2026 August',
     title: 'Paper accepted to the EMNLP 2026 Main Conference',
-    text: 'Our social-pragmatic inference benchmark paper was accepted. The full paper will be made public after the camera-ready version is completed.',
+    text: 'Our social-pragmatic inference benchmark paper was accepted. The full paper will be made public after the camera-ready version is completed. Read more on our blog.',
+    href: '/blog/beyond-irony-emnlp-2026',
+    internal: true,
   },
   {
     date: '2026 June',
@@ -66,7 +68,11 @@ export default function News() {
               <article key={`${item.date}-${item.title}`} className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-2 md:gap-0">
                 <p className="text-[15px] font-semibold" style={{ color: 'var(--text-muted)' }}>{item.date}</p>
                 <div>
-                  {item.href ? (
+                  {item.href && item.internal ? (
+                    <Link to={item.href} className="text-[16px] font-semibold hover:underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
+                      "{item.title}"
+                    </Link>
+                  ) : item.href ? (
                     <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-[16px] font-semibold hover:underline underline-offset-4" style={{ color: 'var(--accent-green)' }}>
                       "{item.title}"
                     </a>
