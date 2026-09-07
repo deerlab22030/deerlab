@@ -18,6 +18,14 @@ type NewsItem = {
 
 const NEWS: NewsItem[] = [
   {
+    title: 'Paper accepted to CoRL 2026',
+    date: '2026 September',
+    excerpt: '“C³ache: Accelerating World Action Models with Cross Inference Chunk Cache,” by Weisen Zhao, Lam Nguyen, Zhicong Lu, and Yuzhang Shang, has been accepted to CoRL 2026. The full paper is now available on arXiv.',
+    tag: 'Publication',
+    relatedLink: 'https://arxiv.org/pdf/2606.08962',
+    relatedLinkLabel: 'Read the full paper',
+  },
+  {
     title: 'Paper accepted to the EMNLP 2026 Main Conference',
     date: '2026 August',
     excerpt: '“You Really Didn’t Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments” has been accepted to the EMNLP 2026 Main Conference. The full paper is now available on arXiv.',

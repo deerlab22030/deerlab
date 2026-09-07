@@ -66,6 +66,14 @@ const AREAS = [
 const PUBLICATIONS = [
   {
     year: '2026',
+    title: 'C³ache: Accelerating World Action Models with Cross Inference Chunk Cache',
+    authors: 'Weisen Zhao, Lam Nguyen, Zhicong Lu, and Yuzhang Shang',
+    venue: 'The 2026 Conference on Robot Learning (CoRL 2026)',
+    link: 'https://arxiv.org/pdf/2606.08962',
+    tags: ['CoRL'],
+  },
+  {
+    year: '2026',
     title: "You Really Didn't Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments",
     authors: 'Shiwei Hong, Junjie Ma, Emma Jiren Wang, Ethan Z. Rong, Siying Hu, Haichang Li, Ziying Wang, and Zhicong Lu',
     venue: 'The 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026), Main Conference',
@@ -226,7 +234,7 @@ const PUBLICATIONS = [
   },
 ];
 
-const VENUE_FILTERS = ['All', 'CHI', 'CSCW', 'ACL', 'EMNLP', 'ASSETS', 'ICWSM'];
+const VENUE_FILTERS = ['All', 'CHI', 'CSCW', 'ACL', 'EMNLP', 'CoRL', 'ASSETS', 'ICWSM'];
 
 const pubByTitle = new Map(PUBLICATIONS.map((pub) => [pub.title, pub]));
 const themeByName = new Map(THEMES.map((theme) => [theme.name, theme]));

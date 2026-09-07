@@ -2,6 +2,13 @@ import { Link } from 'react-router-dom';
 
 const NEWS_ITEMS = [
   {
+    date: '2026 September',
+    title: 'Paper accepted to CoRL 2026',
+    text: 'Our paper “C³ache: Accelerating World Action Models with Cross Inference Chunk Cache” was accepted to CoRL 2026. The full paper is now available on arXiv.',
+    relatedHref: 'https://arxiv.org/pdf/2606.08962',
+    relatedLabel: 'Full paper',
+  },
+  {
     date: '2026 August',
     title: 'Paper accepted to the EMNLP 2026 Main Conference',
     text: 'Our social-pragmatic inference benchmark paper was accepted. The full paper is now available on arXiv. Read more on our blog.',
