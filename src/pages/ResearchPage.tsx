@@ -47,7 +47,7 @@ const AREAS = [
     title: 'Human-AI Interaction',
     desc: 'Building and evaluating AI systems that support creativity, interviews, moderation, value alignment, and public-facing communication.',
     image: '/images/research-human-ai-2026.png',
-    pubs: ['RevTogether', 'InterFlow', 'DanModCap', 'User-Driven Value Alignment'],
+    pubs: ["You Really Didn't Get That?", 'RevTogether', 'InterFlow', 'DanModCap', 'User-Driven Value Alignment'],
   },
   {
     title: 'Human-Agent Interaction',
@@ -59,11 +59,19 @@ const AREAS = [
     title: 'Social Computing / Computational Social Science',
     desc: 'Understanding online communities, livestreaming, VTuber publics, platform cultures, and public sensemaking through qualitative and computational approaches.',
     image: '/images/research-social-css-2026.png',
-    pubs: ['You Watch, You Give, and You Engage', 'The Digital Landscape of God', 'Let\'s Influence Algorithms Together', 'More Kawaii than a Real-Person Live Streamer'],
+    pubs: ["You Really Didn't Get That?", 'You Watch, You Give, and You Engage', 'The Digital Landscape of God', 'Let\'s Influence Algorithms Together', 'More Kawaii than a Real-Person Live Streamer'],
   },
 ];
 
 const PUBLICATIONS = [
+  {
+    year: '2026',
+    title: "You Really Didn't Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments",
+    authors: 'Shiwei Hong, Junjie Ma, Emma Jiren Wang, Ethan Z. Rong, Siying Hu, Haichang Li, Ziying Wang, and Zhicong Lu',
+    venue: 'The 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026), Main Conference',
+    link: 'https://arxiv.org/abs/2609.04384',
+    tags: ['EMNLP', 'Human-AI Interaction', 'Social Computing / Computational Social Science'],
+  },
   {
     year: '2026',
     title: 'Multi-Agent Comedy Club: Investigating Community Discussion Effects on LLM Humor Generation',
@@ -218,7 +226,7 @@ const PUBLICATIONS = [
   },
 ];
 
-const VENUE_FILTERS = ['All', 'CHI', 'CSCW', 'ACL', 'ASSETS', 'ICWSM'];
+const VENUE_FILTERS = ['All', 'CHI', 'CSCW', 'ACL', 'EMNLP', 'ASSETS', 'ICWSM'];
 
 const pubByTitle = new Map(PUBLICATIONS.map((pub) => [pub.title, pub]));
 const themeByName = new Map(THEMES.map((theme) => [theme.name, theme]));

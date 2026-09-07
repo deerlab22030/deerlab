@@ -20,10 +20,12 @@ const NEWS: NewsItem[] = [
   {
     title: 'Paper accepted to the EMNLP 2026 Main Conference',
     date: '2026 August',
-    excerpt: '“You Really Didn’t Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments” has been accepted to the EMNLP 2026 Main Conference. The full paper will be made public after the camera-ready version is completed.',
+    excerpt: '“You Really Didn’t Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments” has been accepted to the EMNLP 2026 Main Conference. The full paper is now available on arXiv.',
     tag: 'Publication',
     internalLink: '/blog/beyond-irony-emnlp-2026',
     linkLabel: 'Read the story on our blog',
+    relatedLink: 'https://arxiv.org/abs/2609.04384',
+    relatedLinkLabel: 'Read the full paper',
   },
   {
     title: "Junjie, Weisen, and Zhicong helped guide GMU STIP's AVATAR project",

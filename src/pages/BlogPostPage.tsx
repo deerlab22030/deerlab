@@ -24,7 +24,12 @@ export default function BlogPostPage() {
           </header>
 
           <div className="blog-article mx-auto max-w-[780px]">
-            <p className="lead">We are excited to announce that our paper, “Benchmarking Social-Pragmatic Inference for Indirect and Playful Chinese Online Discourse,” has been accepted to the Main Conference of EMNLP 2026.</p>
+            <p className="lead">We are excited to announce that our paper, “You Really Didn't Get That? Benchmarking Social Pragmatic Inference for Indirect and Playful Chinese Online Comments,” has been accepted to the Main Conference of EMNLP 2026.</p>
+            <div className="mt-8">
+              <a href="https://arxiv.org/abs/2609.04384" target="_blank" rel="noopener noreferrer" className="inline-flex rounded-full px-5 py-2.5 text-[14px] font-semibold text-white transition-opacity hover:opacity-80" style={{ background: 'var(--accent-green)' }}>
+                Read the full paper on arXiv ↗
+              </a>
+            </div>
             <p>EMNLP—the Conference on Empirical Methods in Natural Language Processing—is one of the flagship international conferences in natural language processing. This year, the conference received an unprecedented 17,669 submissions, of which 2,719 were accepted to the Main Conference, representing an acceptance rate of 15.4%.</p>
             <p>Our paper asks a deceptively simple question: when a language model recognizes that an online comment is ironic, humorous, or playful, has it actually understood what the comment means?</p>
 

@@ -4,9 +4,11 @@ const NEWS_ITEMS = [
   {
     date: '2026 August',
     title: 'Paper accepted to the EMNLP 2026 Main Conference',
-    text: 'Our social-pragmatic inference benchmark paper was accepted. The full paper will be made public after the camera-ready version is completed. Read more on our blog.',
+    text: 'Our social-pragmatic inference benchmark paper was accepted. The full paper is now available on arXiv. Read more on our blog.',
     href: '/blog/beyond-irony-emnlp-2026',
     internal: true,
+    relatedHref: 'https://arxiv.org/abs/2609.04384',
+    relatedLabel: 'Full paper',
   },
   {
     date: '2026 June',
