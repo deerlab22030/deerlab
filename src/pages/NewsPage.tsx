@@ -17,6 +17,7 @@ type NewsItem = {
 };
 
 const NEWS: NewsItem[] = [
+  /* Temporarily hidden until the lab authorizes publication.
   {
     title: 'Paper accepted to CoRL 2026',
     date: '2026 September',
@@ -25,6 +26,7 @@ const NEWS: NewsItem[] = [
     relatedLink: 'https://arxiv.org/pdf/2606.08962',
     relatedLinkLabel: 'Read the full paper',
   },
+  */
   {
     title: 'Paper accepted to the EMNLP 2026 Main Conference',
     date: '2026 August',

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const NEWS_ITEMS = [
+  /* Temporarily hidden until the lab authorizes publication.
   {
     date: '2026 September',
     title: 'Paper accepted to CoRL 2026',
@@ -8,6 +9,7 @@ const NEWS_ITEMS = [
     relatedHref: 'https://arxiv.org/pdf/2606.08962',
     relatedLabel: 'Full paper',
   },
+  */
   {
     date: '2026 August',
     title: 'Paper accepted to the EMNLP 2026 Main Conference',
