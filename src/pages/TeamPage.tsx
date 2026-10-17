@@ -21,11 +21,11 @@ const DIRECTOR = {
 };
 
 const GMU = [
-  { name: 'Zhiyao Shu', title: 'PhD Student', email: 'zshu2@gmu.edu', website: 'https://zhiyaoshu.github.io/', photo: '/images/people/manual/zhiyao-shu.jpg' },
+  { name: 'Shiwei Hong', title: 'PhD Student', email: 'shong46@gmu.edu', website: 'https://shiwei-hong.github.io/', photo: '/images/people/manual/shiwei-hong.jpg' },
   { name: 'Junjie Ma', title: 'PhD Student', email: 'jma26@gmu.edu', website: 'https://jeffrey-wiki.vercel.app/wiki/home', photo: '/images/people/manual/junjie-ma.jpg' },
   { name: 'Haichang Li', title: 'PhD Student', email: 'hli52@gmu.edu', website: 'https://www.linkedin.com/in/haichangli/', photo: '/images/people/manual/haichang-li.jpg' },
-  { name: 'Shiwei Hong', title: 'PhD Student', email: 'shong46@gmu.edu', website: 'https://shiwei-hong.github.io/', photo: '/images/people/manual/shiwei-hong.jpg' },
   { name: 'Weisen Zhao', title: 'PhD Student', email: 'wzhao9@gmu.edu', website: 'https://www.linkedin.com/in/zhaoweisen/', photo: '/images/people/manual/weisen-zhao.jpg' },
+  { name: 'Zhiyao Shu', title: 'PhD Student', email: 'zshu2@gmu.edu', website: 'https://zhiyaoshu.github.io/', photo: '/images/people/manual/zhiyao-shu.jpg' },
   { name: 'Dhiman Goswami', title: 'PhD Student', website: 'https://www.linkedin.com/in/dhimangoswami8/', coadvised: 'Co-advised with Sanchari Das', photo: '/images/people/manual/dhiman-goswami.jpg' },
 ];
 
