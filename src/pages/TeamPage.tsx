@@ -14,13 +14,14 @@ const DIRECTOR = {
   website: 'https://luzhc.github.io',
   cec: 'https://cec.gmu.edu/profiles/zlu6',
   scholar: 'https://scholar.google.com/citations?hl=en&user=xCxyGuwAAAAJ&view_op=list_works',
-  photo: '/images/zhicong-lu-profile.jpg',
+  photo: '/images/people/manual/zhicong-lu.jpg',
   bio: 'Zhicong Lu is an Assistant Professor of Computer Science at George Mason University. His research lies at the intersection of human-computer interaction, social computing, computational social science, and machine learning, with a focus on studying, designing, and building systems that support social interaction, trust, engagement, creativity, and knowledge sharing in virtual and physical spaces. He is currently exploring emerging media, livestreaming, mixed reality, and generative AI for knowledge sharing, creativity, and safeguarding intangible cultural heritage.',
   prior: 'Before joining George Mason University, he was an Assistant Professor at the City University of Hong Kong.',
   interests: ['Human-Computer Interaction', 'Social Computing', 'Generative AI', 'Livestreaming', 'Intangible Cultural Heritage'],
 };
 
 const GMU = [
+  { name: 'Zhiyao Shu', title: 'PhD Student', email: 'zshu2@gmu.edu', website: 'https://zhiyaoshu.github.io/', photo: '/images/people/manual/zhiyao-shu.jpg' },
   { name: 'Junjie Ma', title: 'PhD Student', email: 'jma26@gmu.edu', website: 'https://jeffrey-wiki.vercel.app/wiki/home', photo: '/images/people/manual/junjie-ma.jpg' },
   { name: 'Haichang Li', title: 'PhD Student', email: 'hli52@gmu.edu', website: 'https://www.linkedin.com/in/haichangli/', photo: '/images/people/manual/haichang-li.jpg' },
   { name: 'Shiwei Hong', title: 'PhD Student', email: 'shong46@gmu.edu', website: 'https://shiwei-hong.github.io/', photo: '/images/people/manual/shiwei-hong.jpg' },
@@ -32,11 +33,11 @@ const CITYU = [
   { name: 'Huanchen Wang', title: 'PhD Student', website: 'https://wanghchen.github.io/', coadvised: 'Co-advised with Yuxin Ma', photo: '/images/people/manual/huanchen-wang.jpg' },
   { name: 'Luoying Lin', title: 'PhD Student', website: 'https://luoying0.com/', coadvised: 'Co-advised with Shengdong Zhao', photo: '/images/people/manual/luoying-lin.jpg' },
   { name: 'Zhiyang Wu', title: 'PhD Student', website: 'https://scholars.cityu.edu.hk/en/persons/zhiyangwu5/', coadvised: 'Co-advised with Chen Liu' },
-  { name: 'Jian Ma', title: 'PhD Student', website: 'https://scholars.cityu.edu.hk/en/persons/jianma4/', coadvised: 'Co-advised with Kede Ma' },
   { name: 'Run Yang', title: 'PhD Student', website: 'https://scholars.cityu.edu.hk/en/persons/runyang2/', coadvised: 'Co-advised with Yuhan Luo' },
 ];
 
 const ALUMNI = [
+  { name: 'Jian Ma, Ph.D.', degree: 'Ph.D., City University of Hong Kong', website: 'https://scholars.cityu.edu.hk/en/persons/jianma4/', coadvised: 'Co-advised with Kede Ma' },
   { name: 'Piaohong Wang, Ph.D.', title: 'Industry Researcher in OPPO Research Institute', degree: 'Ph.D., City University of Hong Kong', website: 'https://allenpiaohong.github.io/AllenPiaoHong/index.html', coadvised: 'Co-advised with Jiawei Ma', photo: '/images/people/manual/piaohong-wang.jpg' },
   { name: 'Siying Hu, Ph.D.', title: 'Research Fellow in University of Queensland', degree: 'Ph.D., City University of Hong Kong', website: 'https://sychh.github.io/', photo: '/images/people/manual/siying-hu.jpg' },
   { name: 'Yu Zhang, Ph.D.', title: 'Postdoctoral Fellow in City University of Hong Kong', degree: 'Ph.D., City University of Hong Kong', website: 'https://yuiz.github.io/', photo: '/images/people/manual/yu-zhang.jpg' },
@@ -60,7 +61,7 @@ const COLLABORATORS = [
 
 type Person = {
   name: string;
-  title: string;
+  title?: string;
   email?: string;
   website?: string;
   photo?: string;
@@ -92,7 +93,7 @@ function PersonCard({ person }: { person: Person }) {
         <img src={person.photo || AVATAR} alt="" className="w-[132px] h-[132px] rounded-full object-cover shrink-0" />
         <div className="w-full min-w-0 text-center">
           <h3 className="font-semibold text-[18px] md:text-[19px] leading-tight whitespace-nowrap">{person.name}</h3>
-          <p className="text-[14px] mt-2 leading-snug" style={{ color: 'var(--text-muted)' }}>{person.title}</p>
+          {person.title && <p className="text-[14px] mt-2 leading-snug" style={{ color: 'var(--text-muted)' }}>{person.title}</p>}
           {person.degree && <p className="text-[13px] mt-2" style={{ color: 'var(--text-secondary)' }}>{person.degree}</p>}
           {person.coadvised && <p className="text-[13px] mt-3" style={{ color: 'var(--accent-green)' }}>{person.coadvised}</p>}
         </div>
