@@ -35,7 +35,7 @@ export default function BlogPostPage() {
 
             <figure className="my-12 md:-mx-20 md:my-16">
               <div className="overflow-hidden rounded-[20px] border bg-white p-3 md:p-6" style={{ borderColor: 'var(--border)' }}>
-                <img src="/images/blog/social-pragmatic-benchmark-examples.png" alt="Three representative diagnostic items in the benchmark" className="w-full" />
+                <img src={`${import.meta.env.BASE_URL}images/blog/social-pragmatic-benchmark-examples.png`} alt="Three representative diagnostic items in the benchmark" className="w-full" />
               </div>
               <figcaption>Representative diagnostic items in our benchmark. Each card shows a reconstructed local context, a target comment, a diagnostic question, and a human-validated gold answer among plausible distractors.</figcaption>
             </figure>

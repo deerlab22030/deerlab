@@ -40,25 +40,25 @@ const AREAS = [
   {
     title: 'Human-Computer Interaction',
     desc: 'Designing and studying interactive systems for embodied communication, accessibility, creator-viewer interaction, and meaningful digital experience.',
-    image: '/images/research-hci-2026.png',
+    image: `${import.meta.env.BASE_URL}images/research-hci-2026.png`,
     pubs: ['It\'s Just Part of Me', 'ThingMoji', 'SpeechCap', 'Engage Wider Audience or Facilitate Quality Answers'],
   },
   {
     title: 'Human-AI Interaction',
     desc: 'Building and evaluating AI systems that support creativity, interviews, moderation, value alignment, and public-facing communication.',
-    image: '/images/research-human-ai-2026.png',
+    image: `${import.meta.env.BASE_URL}images/research-human-ai-2026.png`,
     pubs: ["You Really Didn't Get That?", 'RevTogether', 'InterFlow', 'DanModCap', 'User-Driven Value Alignment'],
   },
   {
     title: 'Human-Agent Interaction',
     desc: 'Investigating how people work with AI agents, companions, avatars, and multi-agent communities in social, creative, and knowledge-intensive settings.',
-    image: '/images/research-human-agent-2026.png',
+    image: `${import.meta.env.BASE_URL}images/research-human-agent-2026.png`,
     pubs: ['Multi-Agent Comedy Club', 'RevTogether', 'PuppetChat', 'User-Driven Value Alignment'],
   },
   {
     title: 'Social Computing / Computational Social Science',
     desc: 'Understanding online communities, livestreaming, VTuber publics, platform cultures, and public sensemaking through qualitative and computational approaches.',
-    image: '/images/research-social-css-2026.png',
+    image: `${import.meta.env.BASE_URL}images/research-social-css-2026.png`,
     pubs: ["You Really Didn't Get That?", 'You Watch, You Give, and You Engage', 'The Digital Landscape of God', 'Let\'s Influence Algorithms Together', 'More Kawaii than a Real-Person Live Streamer'],
   },
 ];

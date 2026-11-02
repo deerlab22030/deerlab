@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container-main">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 mb-12">
           <div className="lg:col-span-4">
-            <img src="/images/MasonLogo.jpg" alt="George Mason University" className="w-[280px] max-w-full h-auto mb-6" />
+            <img src={`${import.meta.env.BASE_URL}images/MasonLogo.jpg`} alt="George Mason University" className="w-[280px] max-w-full h-auto mb-6" />
             <p className="text-[15px] leading-relaxed max-w-[320px]" style={{ color: 'rgba(255,255,255,0.58)' }}>
               DEER Lab studies digital experience, embodied interaction, and the social futures of AI.
             </p>
@@ -16,7 +16,7 @@ export default function Footer() {
             <div>
               <h4 className="text-[13px] font-semibold mb-4 uppercase tracking-[0.08em]" style={{ color: 'rgba(255,255,255,0.42)' }}>Last Update</h4>
               <div className="text-[14px] leading-relaxed space-y-2" style={{ color: 'rgba(255,255,255,0.66)' }}>
-                <p>October 17, 2026</p>
+                <p>November 2, 2026</p>
                 <p>Homepage hero video generated with Grok.</p>
                 <p>Research page images generated with GPT-Image2.</p>
               </div>

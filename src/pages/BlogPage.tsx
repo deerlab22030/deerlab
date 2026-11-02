@@ -11,7 +11,7 @@ const BLOG_POSTS = [
     date: 'August 26, 2026',
     author: 'Shiwei Hong',
     excerpt: 'What does it take for a language model to move beyond recognizing irony and actually understand what people mean in context?',
-    image: '/images/blog/social-pragmatic-benchmark-examples.png',
+    image: `${import.meta.env.BASE_URL}images/blog/social-pragmatic-benchmark-examples.png`,
     tag: 'Research',
   },
 ];

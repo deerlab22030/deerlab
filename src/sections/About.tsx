@@ -7,9 +7,9 @@ gsap.registerPlugin(ScrollTrigger);
 const VENUES = ['Human-Computer Interaction', 'Human-AI Interaction', 'Social Computing', 'Natural Language Processing'];
 
 const ABOUT_IMAGES = [
-  { src: '/images/about-livestream.png', alt: 'Livestreaming cultural practices', position: 'center' },
-  { src: '/images/about-human-ai.png', alt: 'Human-AI interaction storyboard', position: 'center' },
-  { src: '/images/about-agent-community.png', alt: 'AI agent community simulation', position: 'center' },
+  { src: `${import.meta.env.BASE_URL}images/about-livestream.png`, alt: 'Livestreaming cultural practices', position: 'center' },
+  { src: `${import.meta.env.BASE_URL}images/about-human-ai.png`, alt: 'Human-AI interaction storyboard', position: 'center' },
+  { src: `${import.meta.env.BASE_URL}images/about-agent-community.png`, alt: 'AI agent community simulation', position: 'center' },
 ];
 
 export default function About() {

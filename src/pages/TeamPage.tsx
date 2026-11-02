@@ -4,7 +4,7 @@ import Nav from '../sections/Nav';
 import Footer from '../sections/Footer';
 import MouseGlow from '../components/MouseGlow';
 
-const AVATAR = '/images/deer-avatar.png';
+const AVATAR = `${import.meta.env.BASE_URL}images/deer-avatar.png`;
 
 const DIRECTOR = {
   name: 'Zhicong Lu',
@@ -14,49 +14,49 @@ const DIRECTOR = {
   website: 'https://luzhc.github.io',
   cec: 'https://cec.gmu.edu/profiles/zlu6',
   scholar: 'https://scholar.google.com/citations?hl=en&user=xCxyGuwAAAAJ&view_op=list_works',
-  photo: '/images/people/manual/zhicong-lu.jpg',
+  photo: `${import.meta.env.BASE_URL}images/people/manual/zhicong-lu.jpg`,
   bio: 'Zhicong Lu is an Assistant Professor of Computer Science at George Mason University. His research lies at the intersection of human-computer interaction, social computing, computational social science, and machine learning, with a focus on studying, designing, and building systems that support social interaction, trust, engagement, creativity, and knowledge sharing in virtual and physical spaces. He is currently exploring emerging media, livestreaming, mixed reality, and generative AI for knowledge sharing, creativity, and safeguarding intangible cultural heritage.',
   prior: 'Before joining George Mason University, he was an Assistant Professor at the City University of Hong Kong.',
   interests: ['Human-Computer Interaction', 'Social Computing', 'Generative AI', 'Livestreaming', 'Intangible Cultural Heritage'],
 };
 
 const GMU = [
-  { name: 'Shiwei Hong', title: 'PhD Student', email: 'shong46@gmu.edu', website: 'https://shiwei-hong.github.io/', photo: '/images/people/manual/shiwei-hong.jpg' },
-  { name: 'Junjie Ma', title: 'PhD Student', email: 'jma26@gmu.edu', website: 'https://jeffrey-wiki.vercel.app/wiki/home', photo: '/images/people/manual/junjie-ma.jpg' },
-  { name: 'Haichang Li', title: 'PhD Student', email: 'hli52@gmu.edu', website: 'https://www.linkedin.com/in/haichangli/', photo: '/images/people/manual/haichang-li.jpg' },
-  { name: 'Weisen Zhao', title: 'PhD Student', email: 'wzhao9@gmu.edu', website: 'https://www.linkedin.com/in/zhaoweisen/', photo: '/images/people/manual/weisen-zhao.jpg' },
-  { name: 'Zhiyao Shu', title: 'PhD Student', email: 'zshu2@gmu.edu', website: 'https://zhiyaoshu.github.io/', photo: '/images/people/manual/zhiyao-shu.jpg' },
-  { name: 'Dhiman Goswami', title: 'PhD Student', website: 'https://www.linkedin.com/in/dhimangoswami8/', coadvised: 'Co-advised with Sanchari Das', photo: '/images/people/manual/dhiman-goswami.jpg' },
+  { name: 'Shiwei Hong', title: 'PhD Student', email: 'shong46@gmu.edu', website: 'https://shiwei-hong.github.io/', photo: `${import.meta.env.BASE_URL}images/people/manual/shiwei-hong.jpg` },
+  { name: 'Junjie Ma', title: 'PhD Student', email: 'jma26@gmu.edu', website: 'https://jeffrey-wiki.vercel.app/wiki/home', photo: `${import.meta.env.BASE_URL}images/people/manual/junjie-ma.jpg` },
+  { name: 'Haichang Li', title: 'PhD Student', email: 'hli52@gmu.edu', website: 'https://www.linkedin.com/in/haichangli/', photo: `${import.meta.env.BASE_URL}images/people/manual/haichang-li.jpg` },
+  { name: 'Weisen Zhao', title: 'PhD Student', email: 'wzhao9@gmu.edu', website: 'https://www.linkedin.com/in/zhaoweisen/', photo: `${import.meta.env.BASE_URL}images/people/manual/weisen-zhao.jpg` },
+  { name: 'Zhiyao Shu', title: 'PhD Student', email: 'zshu2@gmu.edu', website: 'https://zhiyaoshu.github.io/', photo: `${import.meta.env.BASE_URL}images/people/manual/zhiyao-shu.jpg` },
+  { name: 'Dhiman Goswami', title: 'PhD Student', website: 'https://www.linkedin.com/in/dhimangoswami8/', coadvised: 'Co-advised with Sanchari Das', photo: `${import.meta.env.BASE_URL}images/people/manual/dhiman-goswami.jpg` },
 ];
 
 const CITYU = [
-  { name: 'Huanchen Wang', title: 'PhD Student', website: 'https://wanghchen.github.io/', coadvised: 'Co-advised with Yuxin Ma', photo: '/images/people/manual/huanchen-wang.jpg' },
-  { name: 'Luoying Lin', title: 'PhD Student', website: 'https://luoying0.com/', coadvised: 'Co-advised with Shengdong Zhao', photo: '/images/people/manual/luoying-lin.jpg' },
+  { name: 'Huanchen Wang', title: 'PhD Student', website: 'https://wanghchen.github.io/', coadvised: 'Co-advised with Yuxin Ma', photo: `${import.meta.env.BASE_URL}images/people/manual/huanchen-wang.jpg` },
+  { name: 'Luoying Lin', title: 'PhD Student', website: 'https://luoying0.com/', coadvised: 'Co-advised with Shengdong Zhao', photo: `${import.meta.env.BASE_URL}images/people/manual/luoying-lin.jpg` },
   { name: 'Zhiyang Wu', title: 'PhD Student', website: 'https://scholars.cityu.edu.hk/en/persons/zhiyangwu5/', coadvised: 'Co-advised with Chen Liu' },
   { name: 'Run Yang', title: 'PhD Student', website: 'https://scholars.cityu.edu.hk/en/persons/runyang2/', coadvised: 'Co-advised with Yuhan Luo' },
 ];
 
 const ALUMNI = [
   { name: 'Jian Ma, Ph.D.', degree: 'Ph.D., City University of Hong Kong', website: 'https://scholars.cityu.edu.hk/en/persons/jianma4/', coadvised: 'Co-advised with Kede Ma' },
-  { name: 'Piaohong Wang, Ph.D.', title: 'Industry Researcher in OPPO Research Institute', degree: 'Ph.D., City University of Hong Kong', website: 'https://allenpiaohong.github.io/AllenPiaoHong/index.html', coadvised: 'Co-advised with Jiawei Ma', photo: '/images/people/manual/piaohong-wang.jpg' },
-  { name: 'Siying Hu, Ph.D.', title: 'Research Fellow in University of Queensland', degree: 'Ph.D., City University of Hong Kong', website: 'https://sychh.github.io/', photo: '/images/people/manual/siying-hu.jpg' },
-  { name: 'Yu Zhang, Ph.D.', title: 'Postdoctoral Fellow in City University of Hong Kong', degree: 'Ph.D., City University of Hong Kong', website: 'https://yuiz.github.io/', photo: '/images/people/manual/yu-zhang.jpg' },
-  { name: 'Qian Wan, Ph.D.', title: 'Research Fellow in Nanyang Technological University.', degree: 'Ph.D., City University of Hong Kong', website: 'https://ahin-qianwan.github.io/', photo: '/images/people/manual/qian-wan.jpg' },
+  { name: 'Piaohong Wang, Ph.D.', title: 'Industry Researcher in OPPO Research Institute', degree: 'Ph.D., City University of Hong Kong', website: 'https://allenpiaohong.github.io/AllenPiaoHong/index.html', coadvised: 'Co-advised with Jiawei Ma', photo: `${import.meta.env.BASE_URL}images/people/manual/piaohong-wang.jpg` },
+  { name: 'Siying Hu, Ph.D.', title: 'Research Fellow in University of Queensland', degree: 'Ph.D., City University of Hong Kong', website: 'https://sychh.github.io/', photo: `${import.meta.env.BASE_URL}images/people/manual/siying-hu.jpg` },
+  { name: 'Yu Zhang, Ph.D.', title: 'Postdoctoral Fellow in City University of Hong Kong', degree: 'Ph.D., City University of Hong Kong', website: 'https://yuiz.github.io/', photo: `${import.meta.env.BASE_URL}images/people/manual/yu-zhang.jpg` },
+  { name: 'Qian Wan, Ph.D.', title: 'Research Fellow in Nanyang Technological University.', degree: 'Ph.D., City University of Hong Kong', website: 'https://ahin-qianwan.github.io/', photo: `${import.meta.env.BASE_URL}images/people/manual/qian-wan.jpg` },
 ];
 
 const COLLABORATORS = [
-  { name: 'Ryan Yen', title: 'PhD Student, Massachusetts Institute of Technology', website: 'https://ryanyen2.github.io/', photo: '/images/people/manual/ryan-yen.jpg' },
-  { name: 'Felicia Li Feng', title: 'PhD Student, University of Waterloo', website: 'https://felicia35.github.io/', photo: '/images/people/manual/felicia-li-feng.jpg' },
+  { name: 'Ryan Yen', title: 'PhD Student, Massachusetts Institute of Technology', website: 'https://ryanyen2.github.io/', photo: `${import.meta.env.BASE_URL}images/people/manual/ryan-yen.jpg` },
+  { name: 'Felicia Li Feng', title: 'PhD Student, University of Waterloo', website: 'https://felicia35.github.io/', photo: `${import.meta.env.BASE_URL}images/people/manual/felicia-li-feng.jpg` },
   { name: 'Ethan Zhiyi Rong', title: 'PhD Student, University of Toronto', website: 'https://scholar.google.com/citations?user=M6A4OVYAAAAJ&hl=en&authuser=2' },
-  { name: 'Elise Chenxinran Shen', title: 'PhD Student, University of Toronto', website: 'https://elisexinranshen.github.io/', photo: '/images/people/manual/elise-chenxinran-shen.jpg' },
-  { name: 'Ningjing Tang', title: 'PhD Student, Carnegie Mellon University', website: 'https://ningjingtang.com/', photo: '/images/people/manual/ningjing-tang.jpg' },
-  { name: 'AnKolika De', title: 'PhD Student, Penn State', website: 'https://sites.psu.edu/ankolikade/', photo: '/images/people/manual/ankolika-de.jpg' },
-  { name: 'Lanjing Liu', title: 'PhD Student, Johns Hopkins University', website: 'https://lanjing.design/', photo: '/images/people/manual/lanjing-liu.jpg' },
-  { name: 'Minzhu Zhao', title: 'PhD Student, University of Minnesota', website: 'https://mindyzhaominzhu.github.io/', photo: '/images/people/manual/minzhu-zhao.jpg' },
-  { name: 'Emma Jiren Wang', title: 'Research Assistant, Virginia Tech', website: 'https://github.com/Jiren1247', photo: '/images/people/manual/emma-jiren-wang.jpg' },
-  { name: 'Zhe Tan', title: 'Master Student, University of Illinois Urbana-Champaign', website: 'https://www.linkedin.com/in/zhe-tan-650163238/', photo: '/images/people/manual/zhe-tan.jpg' },
-  { name: 'Mingyuan Li', title: 'Master Student, University of Pennsylvania', website: 'https://limingyuan.com', photo: '/images/people/manual/mingyuan-li.jpg' },
-  { name: 'Ziying Wang', title: 'Undergraduate Student, Duke Kunshan University', website: 'https://dl.acm.org/profile/99661743577', photo: '/images/people/manual/ziying-wang.jpg' },
+  { name: 'Elise Chenxinran Shen', title: 'PhD Student, University of Toronto', website: 'https://elisexinranshen.github.io/', photo: `${import.meta.env.BASE_URL}images/people/manual/elise-chenxinran-shen.jpg` },
+  { name: 'Ningjing Tang', title: 'PhD Student, Carnegie Mellon University', website: 'https://ningjingtang.com/', photo: `${import.meta.env.BASE_URL}images/people/manual/ningjing-tang.jpg` },
+  { name: 'AnKolika De', title: 'PhD Student, Penn State', website: 'https://sites.psu.edu/ankolikade/', photo: `${import.meta.env.BASE_URL}images/people/manual/ankolika-de.jpg` },
+  { name: 'Lanjing Liu', title: 'PhD Student, Johns Hopkins University', website: 'https://lanjing.design/', photo: `${import.meta.env.BASE_URL}images/people/manual/lanjing-liu.jpg` },
+  { name: 'Minzhu Zhao', title: 'PhD Student, University of Minnesota', website: 'https://mindyzhaominzhu.github.io/', photo: `${import.meta.env.BASE_URL}images/people/manual/minzhu-zhao.jpg` },
+  { name: 'Emma Jiren Wang', title: 'Research Assistant, Virginia Tech', website: 'https://github.com/Jiren1247', photo: `${import.meta.env.BASE_URL}images/people/manual/emma-jiren-wang.jpg` },
+  { name: 'Zhe Tan', title: 'Master Student, University of Illinois Urbana-Champaign', website: 'https://www.linkedin.com/in/zhe-tan-650163238/', photo: `${import.meta.env.BASE_URL}images/people/manual/zhe-tan.jpg` },
+  { name: 'Mingyuan Li', title: 'Master Student, University of Pennsylvania', website: 'https://limingyuan.com', photo: `${import.meta.env.BASE_URL}images/people/manual/mingyuan-li.jpg` },
+  { name: 'Ziying Wang', title: 'Undergraduate Student, Duke Kunshan University', website: 'https://dl.acm.org/profile/99661743577', photo: `${import.meta.env.BASE_URL}images/people/manual/ziying-wang.jpg` },
 ];
 
 type Person = {
