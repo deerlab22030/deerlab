@@ -56,7 +56,7 @@ const COLLABORATORS = [
   { name: 'Emma Jiren Wang', title: 'Research Assistant, Virginia Tech', website: 'https://github.com/Jiren1247', photo: `${import.meta.env.BASE_URL}images/people/manual/emma-jiren-wang.jpg` },
   { name: 'Zhe Tan', title: 'Master Student, University of Illinois Urbana-Champaign', website: 'https://www.linkedin.com/in/zhe-tan-650163238/', photo: `${import.meta.env.BASE_URL}images/people/manual/zhe-tan.jpg` },
   { name: 'Mingyuan Li', title: 'Master Student, University of Pennsylvania', website: 'https://limingyuan.com', photo: `${import.meta.env.BASE_URL}images/people/manual/mingyuan-li.jpg` },
-  { name: 'Ziying Wang', title: 'Undergraduate Student, Duke Kunshan University', website: 'https://dl.acm.org/profile/99661743577', photo: `${import.meta.env.BASE_URL}images/people/manual/ziying-wang.jpg` },
+  { name: 'Ziying Wang', title: 'Undergraduate Student, Duke Kunshan University', website: 'https://ziyingaudreywang.github.io/PersonalWebsite/', photo: `${import.meta.env.BASE_URL}images/people/manual/ziying-wang.jpg` },
   { name: 'Sai Toshit Raj Repala', title: 'Undergraduate student, George Mason University', email: 'toshitrepala24@gmail.com', website: 'https://linkedin.com/in/sai-toshit-raj-repala-59a66b346', photo: `${import.meta.env.BASE_URL}images/people/manual/sai-toshit-raj-repala.jpg`, photoScale: 1.8, photoPosition: '32% 10%' },
   { name: 'Varun Chandan Ramshetti', title: 'Master student, George Mason University', email: 'vramshet@gmu.edu', website: 'https://vcr27.github.io/', photo: `${import.meta.env.BASE_URL}images/people/manual/varun-chandan-ramshetti.png` },
 ];
