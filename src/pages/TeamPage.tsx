@@ -57,6 +57,8 @@ const COLLABORATORS = [
   { name: 'Zhe Tan', title: 'Master Student, University of Illinois Urbana-Champaign', website: 'https://www.linkedin.com/in/zhe-tan-650163238/', photo: `${import.meta.env.BASE_URL}images/people/manual/zhe-tan.jpg` },
   { name: 'Mingyuan Li', title: 'Master Student, University of Pennsylvania', website: 'https://limingyuan.com', photo: `${import.meta.env.BASE_URL}images/people/manual/mingyuan-li.jpg` },
   { name: 'Ziying Wang', title: 'Undergraduate Student, Duke Kunshan University', website: 'https://dl.acm.org/profile/99661743577', photo: `${import.meta.env.BASE_URL}images/people/manual/ziying-wang.jpg` },
+  { name: 'Sai Toshit Raj Repala', title: 'Undergraduate student, George Mason University', major: 'Computer Science', email: 'toshitrepala24@gmail.com', website: 'https://linkedin.com/in/sai-toshit-raj-repala-59a66b346', photo: `${import.meta.env.BASE_URL}images/people/manual/sai-toshit-raj-repala.jpg`, photoScale: 1.8, photoPosition: '32% 10%' },
+  { name: 'Varun Chandan Ramshetti', title: 'Master student, George Mason University', major: 'Computer Science', email: 'vramshet@gmu.edu', website: 'https://vcr27.github.io/', photo: `${import.meta.env.BASE_URL}images/people/manual/varun-chandan-ramshetti.png` },
 ];
 
 type Person = {
@@ -67,6 +69,9 @@ type Person = {
   photo?: string;
   coadvised?: string;
   degree?: string;
+  major?: string;
+  photoScale?: number;
+  photoPosition?: string;
 };
 
 function IconLink({ href, label, type }: { href: string; label: string; type: 'email' | 'website' }) {
@@ -88,12 +93,15 @@ function IconLink({ href, label, type }: { href: string; label: string; type: 'e
 
 function PersonCard({ person }: { person: Person }) {
   return (
-    <article className="group p-5 rounded-2xl bg-white h-[340px] flex flex-col justify-between transition-all hover:-translate-y-1" style={{ border: '1px solid var(--border)' }}>
+    <article className="group p-5 rounded-2xl bg-white min-h-[340px] h-full flex flex-col justify-between transition-all hover:-translate-y-1" style={{ border: '1px solid var(--border)' }}>
       <div className="flex flex-col gap-5 items-center">
-        <img src={person.photo || AVATAR} alt="" className="w-[132px] h-[132px] rounded-full object-cover shrink-0" />
+        <div className="w-[132px] h-[132px] rounded-full overflow-hidden shrink-0">
+          <img src={person.photo || AVATAR} alt="" className="w-full h-full object-cover" style={{ transform: person.photoScale ? `scale(${person.photoScale})` : undefined, transformOrigin: person.photoPosition }} />
+        </div>
         <div className="w-full min-w-0 text-center">
-          <h3 className="font-semibold text-[18px] md:text-[19px] leading-tight whitespace-nowrap">{person.name}</h3>
+          <h3 className="font-semibold text-[18px] md:text-[19px] leading-tight break-words">{person.name}</h3>
           {person.title && <p className="text-[14px] mt-2 leading-snug" style={{ color: 'var(--text-muted)' }}>{person.title}</p>}
+          {person.major && <p className="text-[13px] mt-2" style={{ color: 'var(--text-secondary)' }}>{person.major}</p>}
           {person.degree && <p className="text-[13px] mt-2" style={{ color: 'var(--text-secondary)' }}>{person.degree}</p>}
           {person.coadvised && <p className="text-[13px] mt-3" style={{ color: 'var(--accent-green)' }}>{person.coadvised}</p>}
         </div>
