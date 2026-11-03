@@ -4,7 +4,6 @@
 - University: George Mason University
 - Name: Varun Chandan Ramshetti
 - Title: Master student, George Mason University
-- Major: Computer Science
 - Degree:
 - Email: vramshet@gmu.edu
 - Website: https://vcr27.github.io/

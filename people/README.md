@@ -23,7 +23,7 @@ people/
 3. 把照片放在同一文件夹，推荐命名为 `portrait.jpg` 或 `portrait.png`，在 `Photo` 中填写实际文件名。没有照片就留空，页面使用默认头像。`Photo source` 可填写照片来源网址或说明“本人提供”。
 4. 告诉 Codex：“根据 people 中的资料更新 People 页面”，也可以指定某个文件夹。资料不会自动显示到网站，仍需要更新页面代码。
 
-`Group` 与 `Name` 必填。Group 使用 `phd-students/gmu`、`phd-students/cityu`、`alumni-phds` 或 `collaborators`；硕士、本科成员及实习生归入 collaborators。`University` 填学校全称。博士生的 `Title` 通常为 `PhD Student`。校友的 `Name` 使用 `Name, Ph.D.` 格式，`Degree` 单独填写，例如 `Ph.D., City University of Hong Kong`；`Title` 仅填写已知的现职。合作者的 `Title` 请提供完整身份与学校，例如 `Master student, George Mason University`；仅填写身份时可结合 University 补全学校信息。`Major` 是可选专业，填写后在页面身份下单独展示。
+`Group` 与 `Name` 必填。Group 使用 `phd-students/gmu`、`phd-students/cityu`、`alumni-phds` 或 `collaborators`；硕士、本科成员及实习生归入 collaborators。`University` 填学校全称。博士生的 `Title` 通常为 `PhD Student`。校友的 `Name` 使用 `Name, Ph.D.` 格式，`Degree` 单独填写，例如 `Ph.D., City University of Hong Kong`；`Title` 仅填写已知的现职。合作者的 `Title` 请提供完整身份与学校，例如 `Master student, George Mason University`；仅填写身份时可结合 University 补全学校信息。新增成员无需提供专业信息，页面不展示专业。
 
 也可以像本次一样直接把多位新人资料放入 `_template/`：`1.md` 配 `1.jpg`、`2.md` 配 `2.png`。在每份资料中填写 Group、Name 和 Photo 后通知 Codex 更新。完成后，Codex 会按姓名建立对应分组文件夹，将资料统一命名为 `info.md`、照片命名为 `portrait.原扩展名`，清除填写说明，将使用过的资料移出 `_template/`，仅保留空白模板。已有人员的修改应放在原成员目录中。
 

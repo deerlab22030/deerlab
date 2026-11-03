@@ -4,7 +4,6 @@
 - University: George Mason University
 - Name: Sai Toshit Raj Repala
 - Title: Undergraduate student, George Mason University
-- Major: Computer Science
 - Degree:
 - Email: toshitrepala24@gmail.com
 - Website: https://linkedin.com/in/sai-toshit-raj-repala-59a66b346
